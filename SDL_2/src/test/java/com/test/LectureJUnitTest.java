@@ -20,9 +20,18 @@ public class LectureJUnitTest {
     }
     
     @Test
-    public void testLecture() {
+    public void testLecture1() {
         //test 1
         Lecture test = new Lecture("1","Puspa");
         assertEquals("1",test.getId());
+        assertNotEquals("2",test.getId());
+    }
+    
+    @Test
+    public void testLecture2() {
+        //test 1
+        Lecture test = new Lecture("1","Puspa");
+        assertEquals("Puspa",test.getName());
+        assertNotEquals("not Puspa",test.getName());
     }
 }
