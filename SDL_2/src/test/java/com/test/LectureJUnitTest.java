@@ -5,6 +5,7 @@
  */
 package com.test;
 
+import com.sdl.Lecture;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
@@ -16,5 +17,12 @@ import static org.junit.jupiter.api.Assertions.*;
 public class LectureJUnitTest {
     
     public LectureJUnitTest() {
-    }    
+    }
+    
+    @Test
+    public void testLecture() {
+        //test 1
+        Lecture test = new Lecture("1","Puspa");
+        assertEquals("1",test.getId());
+    }
 }
