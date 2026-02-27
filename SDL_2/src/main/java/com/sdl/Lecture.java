@@ -20,7 +20,7 @@ public class Lecture {
     }
 
     /**
-     * Construktor
+     * Konstruktor
      * @param id
      * @param name 
      */
@@ -56,5 +56,5 @@ public class Lecture {
     public void setName(String name) {
         this.name = name;
     }
-    
+  
 }
