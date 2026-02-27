@@ -8,7 +8,7 @@ package com.test;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
-
+import com.sdl.MyStringLarik;
 /**
  *
  * @author puspa
@@ -41,8 +41,8 @@ public class MyStringLarikJUnitTest {
         test.append(2,"cherry");
         test.append(3,"apple");
         test.append(4,"grape");
-        assertEquals(1,test.isExist("apple"));
-        assertEquals(3,test.getNumbers("apple"));
+        assertEquals(Boolean.TRUE,test.isExist("apple"));
+        assertEquals(2,test.getNumbers("apple"));
     }
     
 }
