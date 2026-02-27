@@ -31,7 +31,7 @@ public class MyStringLarikJUnitTest {
         assertNotEquals("banana",test.getValue(0));
         assertEquals("out of range",test.getValue(5));
     }
-
+    
     @Test
     public void testMyLarik1() {
         //test 2
@@ -44,5 +44,5 @@ public class MyStringLarikJUnitTest {
         assertEquals(Boolean.TRUE,test.isExist("apple"));
         assertEquals(2,test.getNumbers("apple"));
     }
-    
+  
 }

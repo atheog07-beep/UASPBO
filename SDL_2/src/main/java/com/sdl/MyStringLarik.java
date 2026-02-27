@@ -13,7 +13,7 @@ public class MyStringLarik {
     // size/panjang larik dengan tipe data int
     private int size; // ukuran larik
     // larik penyimpan data bertipe String
-    private String data; // larik penyimpan data
+    private String[] data; // larik penyimpan data
 
     public MyStringLarik() {
     }
@@ -24,6 +24,7 @@ public class MyStringLarik {
      */
     public MyStringLarik(int size) {
         this.size = size;
+        this.data = new String[size];
     }
 
     /**
@@ -43,14 +44,14 @@ public class MyStringLarik {
     /**
      * @return the data
      */
-    public String getData() {
+    public String[] getData() {
         return data;
     }
 
     /**
      * @param data the data to set
      */
-    public void setData(String data) {
+    public void setData(String[] data) {
         this.data = data;
     }
     
@@ -60,7 +61,7 @@ public class MyStringLarik {
      * @param value 
      */
     public void append(int indeks,String value){
-        
+        this.data[indeks]= value;
     }
     
     /**
@@ -68,8 +69,11 @@ public class MyStringLarik {
      * @param indeks
      * @return 
      */
-    public double getValue(int indeks){
-        return 0;
+    public String getValue(int indeks){
+        if (indeks < this.getSize())
+            return this.data[indeks];
+        else
+            return "out of range";
     }
 
     /**
@@ -78,6 +82,11 @@ public class MyStringLarik {
      * @return 
      */
     public boolean isExist(String value){
+        for (int i = 0; i < data.length; i++) {
+            String string = data[i];
+            if (string.equals(value))
+                return true;
+        }
         return false;
     }
     
@@ -87,6 +96,14 @@ public class MyStringLarik {
      * @return 
      */
     public int getNumbers(String value){
-        return 0;    
+        int sum = 0;
+        if(isExist(value)){
+            for (int i = 0; i < data.length; i++) {
+                String string = data[i];
+                if (string.equals(value))
+                    sum = sum+1;
+            }
+        }
+        return sum;    
     }
 }
