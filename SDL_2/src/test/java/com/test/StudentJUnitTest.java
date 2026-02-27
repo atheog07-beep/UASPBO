@@ -22,7 +22,7 @@ public class StudentJUnitTest {
     @Test
     public void testLecture1() {
         //test 1
-        Student test = new Student("1","Budi");
+          Student test = new Student("1","Budi");
         assertEquals("1",test.getId());
         assertNotEquals("2",test.getId());
     }
