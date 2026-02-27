@@ -13,7 +13,7 @@ public class MyLarik {
     // size/panjang larik dengan tipe data int
     private int size; // ukuran larik
     // larik penyimpan data bertipe double
-    private double data; // larik penyimpan data
+    private double data[]; // larik penyimpan data
 
     /**
      * Konstruktor
@@ -27,6 +27,7 @@ public class MyLarik {
      */
     public MyLarik(int size) {
         this.size = size;
+        this.data = new double[size];
     }
 
     /**
@@ -46,14 +47,14 @@ public class MyLarik {
     /**
      * @return the data
      */
-    public double getData() {
+    public double[] getData() {
         return data;
     }
 
     /**
      * @param data the data to set
      */
-    public void setData(double data) {
+    public void setData(double[] data) {
         this.data = data;
     }
     
@@ -63,7 +64,7 @@ public class MyLarik {
      * @param value 
      */
     public void append(int indeks,double value){
-        
+            this.data[indeks]=value;
     }
     
     /**
@@ -72,7 +73,10 @@ public class MyLarik {
      * @return 
      */
     public double getValue(int indeks){
-        return 0;
+        if (indeks > size)
+            return -1;
+        else
+            return this.data[indeks];
     }
     
     /**

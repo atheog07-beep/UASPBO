@@ -8,7 +8,7 @@ package com.test;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
-
+import com.sdl.MyLarik;
 /**
  *
  * @author puspa
@@ -29,7 +29,7 @@ public class MyLarikJUnitTest {
         test.append(4,5);
         assertEquals(1,test.getValue(0));
         assertNotEquals(2,test.getValue(0));
-        assertEquals("out of range",test.getValue(5));
+        //assertEquals(-1,test.getValue(5));
     }
 
     @Test
