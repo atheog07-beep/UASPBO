@@ -84,7 +84,12 @@ public class MyLarik {
      * @return 
      */
     public double getAverage(){
-       return 0; 
+        double sum =0;
+        for (int i = 0; i < data.length; i++) {
+            double d = data[i];
+            sum = sum+d;
+        }
+       return sum/data.length; 
     }
     
     /**
