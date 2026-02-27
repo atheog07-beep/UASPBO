@@ -19,7 +19,7 @@ public class StudentJUnitTest {
     }
     
     @Test
-    public void testLecture1() {
+    public void testStudent1() {
         //test 1
         Student test = new Student("1","Budi");
         assertEquals("1",test.getId());
@@ -27,7 +27,7 @@ public class StudentJUnitTest {
     }
     
     @Test
-    public void testLecture2() {
+    public void testStudent2() {
         //test 1
         Student test = new Student("1","Puspa");
         assertEquals("Puspa",test.getName());
