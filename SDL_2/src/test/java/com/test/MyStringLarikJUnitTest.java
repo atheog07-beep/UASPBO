@@ -44,42 +44,5 @@ public class MyStringLarikJUnitTest {
         assertEquals(Boolean.TRUE,test.isExist("apple"));
         assertEquals(2,test.getNumbers("apple"));
     }
-  
-
-/**
- *
- * @author puspa
- */
-public class MyStringLarikJUnitTest {
-    
-    public MyStringLarikJUnitTest() {
-    }
-    
-    @Test
-    public void testMyLarik() {
-        //test 1
-        MyStringLarik test = new MyStringLarik(5);
-        test.append(0,"apple");
-        test.append(1,"banana");
-        test.append(2,"cherry");
-        test.append(3,"apple");
-        test.append(4,"grape");
-        assertEquals("apple",test.getValue(0));
-        assertNotEquals("banana",test.getValue(0));
-        assertEquals("out of range",test.getValue(5));
-    }
-
-    @Test
-    public void testMyLarik1() {
-        //test 2
-        MyStringLarik test = new MyStringLarik(5);
-        test.append(0,"apple");
-        test.append(1,"banana");
-        test.append(2,"cherry");
-        test.append(3,"apple");
-        test.append(4,"grape");
-        assertEquals(1,test.isExist("apple"));
-        assertEquals(3,test.getNumbers("apple"));
-    }
-    
+      
 }
