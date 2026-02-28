@@ -31,6 +31,15 @@ public class MyLarik {
     }
 
     /**
+     * Konstruktor dengan parameter data yang sudah dibuat
+     * @param data 
+     */
+    public MyLarik(double[] data) {
+        this.data = data;
+        this.size= this.data.length;
+    }
+
+    /**
      * @return the size
      */
     public int getSize() {
@@ -97,6 +106,12 @@ public class MyLarik {
      * @return 
      */
     public double getVarians(){
-        return 0;
+        double rerata = this.getAverage();
+        double varians = 0;
+        for (int i = 0; i < data.length; i++) {
+            double d = data[i];
+            varians = varians + Math.pow((d-rerata), 2);
+        }
+        return varians/size;
     }
 }
