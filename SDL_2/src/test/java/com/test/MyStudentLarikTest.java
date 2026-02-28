@@ -26,7 +26,7 @@ public class MyStudentLarikTest {
         MyStudentLarik test = new MyStudentLarik(2);
         Student student1 = new Student("1","Puspa");
         test.append(0,student1);
-        Student student2 = new Student("2","Adi")
+        Student student2 = new Student("2","Adi");
         test.append(1,student2);
         assertEquals("Puspa",test.getValue(0).getName());
     }
