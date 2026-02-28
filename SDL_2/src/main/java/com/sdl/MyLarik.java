@@ -89,10 +89,10 @@ public class MyLarik {
             double d = data[i];
             sum = sum+d;
         }
-       return sum/data.length; 
+       return sum/data.length;
     }
-    
-    /**
+ 
+     /**
      * Fungsi menghitung varians larik data. Asumsi semua data sudah terisi.
      * @return 
      */
