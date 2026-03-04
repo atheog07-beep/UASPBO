@@ -20,7 +20,8 @@ public class MyStudentLarikTest {
     public MyStudentLarikTest() {
     }
     
-     @Test
+    
+    @Test
     public void testMyLarik() {
         //test 1
         MyStudentLarik test = new MyStudentLarik(2);
@@ -30,6 +31,5 @@ public class MyStudentLarikTest {
         test.append(1,student2);
         assertEquals("Puspa",test.getValue(0).getName());
     }
-    
     
 }
