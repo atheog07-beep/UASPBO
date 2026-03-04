@@ -114,4 +114,16 @@ public class MyLarik {
         }
         return varians/size;
     }
+    
+    /**
+     * Fungsi untuk membuat list berisi data deret hitung
+     * @param start
+     * @param stop
+     * @param increement
+     * @return 
+     */
+    public static int[] getSeries(int start, int stop, int increement){
+        
+        return null;
+    }
 }
