@@ -8,22 +8,28 @@ package com.test;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
-import com.sdl.MyLarik;
-
+import com.sdl.*;
 /**
  *
  * @author puspa
  */
-public class MyLarikJUnitTest1 {
+public class Rekursif2Test {
     
-    public MyLarikJUnitTest1() {
+    public Rekursif2Test() {
     }
     
     @Test
-    public void testMyLarik() {
-       int[] data = MyLarik.getSeries(0, 5, 2);
-       assertEquals(0,data[0]);
-       assertEquals(2,data[1]);
-       assertNotEquals(2,data[0]);
+    public void test1(){
+        //test fungsi paijo
+        int hasil = Rekursif.paijo(3);
+        System.out.println("hasil ="+hasil);
+        assertEquals(54,Rekursif.paijo(3));
     }
+    
+    @Test
+    public void test2(){
+        // test fungsi upAndDown
+        Rekursif.upAndDown(3);
+    }
+    
 }
