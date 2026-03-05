@@ -116,14 +116,20 @@ public class MyLarik {
     }
     
     /**
-     * Fungsi untuk membuat list berisi data deret hitung
-     * @param start
-     * @param stop
-     * @param increement
+     * Fungsi menghitung total jumlah data dengan pendekatan looping
+     * @param indeks
      * @return 
      */
-    public static int[] getSeries(int start, int stop, int increement){
-        
-        return null;
+    public double getLoopSum(int indeks){
+        return 0;
+    }
+    
+    /**
+     * Fungsi untuk menghitung total jumlah data dengan pendekatan rekursif
+     * @param indeks
+     * @return 
+     */
+    public double getRekursifSum(int indeks){
+        return 0;
     }
 }
