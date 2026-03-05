@@ -76,5 +76,17 @@ public class Rekursif {
         return 0;
     }
     
+    /**
+     * Fungsi untuk mencari besar suku ke-N dari sebuah deret hitung
+     * Contoh: awal= 1, selisih = 3, indeks_suku = 5
+     * deretnya : [1,4,7,10,13], maka luarannya = 13
+     * @param awal
+     * @param selisih
+     * @param jumlah_suku
+     * @return 
+     */
+    public static int deretHitung(int awal, int selisih, int indeks_suku){
+        return 0;
+    }
     
 }
