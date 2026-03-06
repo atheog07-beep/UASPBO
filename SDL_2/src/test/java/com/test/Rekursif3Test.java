@@ -35,9 +35,13 @@ public class Rekursif3Test {
         data[3]=4;
         data[4]=5;
         
-        int hasil = Rekursif.arraySum(data,3);
+        int hasil = Rekursif.arraySum(data,4);
         System.out.println("Hasil = "+hasil);
-        assertEquals(10,Rekursif.arraySum(data, 3));
+        assertEquals(10,Rekursif.arraySum(data, 4));
+        
+        int hasil1 = Rekursif.arraySum(data,4);
+        System.out.println("Hasil = "+hasil1);
+        assertEquals(6,Rekursif.arraySum(data, 3));
     }
     
     @Test
