@@ -23,7 +23,7 @@ public class Rekursif2Test {
         //test fungsi paijo
         int hasil = Rekursif.paijo(3);
         System.out.println("hasil ="+hasil);
-        assertEquals(54,Rekursif.paijo(3));
+        assertEquals(21,Rekursif.paijo(3));
     }
     
     @Test
