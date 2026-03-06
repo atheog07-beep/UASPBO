@@ -24,6 +24,7 @@ public class RekursifTest {
         int hasil_faktorial = Rekursif.faktorial(2);
         System.out.println("Hasil = "+hasil_faktorial);
         assertEquals(2,Rekursif.faktorial(2));
+        assertEquals(6,Rekursif.faktorial(3));
     }
     @Test
     public void test2(){
