@@ -89,4 +89,14 @@ public class Rekursif {
         return 0;
     }
     
+    /**
+     * Fungsi pembuat data larik deret hitung
+     * @param awal
+     * @param selish
+     * @param indeks_suku
+     * @return 
+     */
+    public static int[] getDeretHitung(int awal, int selish, int indeks_suku){
+        return null;
+    }
 }
