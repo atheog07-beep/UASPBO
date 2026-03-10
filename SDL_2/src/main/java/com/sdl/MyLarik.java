@@ -121,8 +121,15 @@ public class MyLarik {
      * @return 
      */
     public double getLoopSum(int indeks){
-        return 0;
+    double jumlah = 0;
+
+    for(int i = 0; i <= indeks; i++){
+        jumlah = jumlah + data[i];
     }
+
+    return jumlah;
+}
+    
     
     /**
      * Fungsi untuk menghitung total jumlah data dengan pendekatan rekursif
@@ -130,6 +137,12 @@ public class MyLarik {
      * @return 
      */
     public double getRekursifSum(int indeks){
-        return 0;
-    }
+      
+    if(indeks == 0)
+        return data[0];
+    else
+        return data[indeks] + getRekursifSum(indeks-1);
 }
+}  
+
+

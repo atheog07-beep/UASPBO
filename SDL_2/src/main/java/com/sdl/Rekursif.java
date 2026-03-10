@@ -44,8 +44,13 @@ public class Rekursif {
      * @return 
      */
     public static int paijo(int x){
-        return 0;
-    }
+       
+    if(x == 1)
+        return 7;
+    else
+        return 7 + paijo(x-1);
+}
+    
     
     /**
      * Fungsi rekursif up and down
@@ -53,7 +58,14 @@ public class Rekursif {
      */
     public static void upAndDown(int n){
         
-    }
+    if(n == 0)
+        return;
+
+    System.out.println(n);
+    upAndDown(n-1);
+    System.out.println(n);
+}
+    
     
     /**
      * Fungsi deret fibonaci dengan masukan suku ke-1, suku ke-2 dan 
@@ -63,9 +75,15 @@ public class Rekursif {
      * @return 
      */
     public static int fibonaci(int suku1, int suku2, int sukuKe_N){
-        return 0;
-    }
-
+       
+    if(sukuKe_N == 1)
+        return suku1;
+    else if(sukuKe_N == 2)
+        return suku2;
+    else
+        return fibonaci(suku1, suku2, sukuKe_N-1) + fibonaci(suku1, suku2, sukuKe_N-2);
+}
+    
     /**
      * Fungsi untuk buat penjumlah larik jika diberi data larik dan posisi indeks yang akan dijumlahkan
      * @param data
@@ -73,8 +91,13 @@ public class Rekursif {
      * @return 
      */
     public static int arraySum(int[] data, int i) {
+     
+    if(i == 0)
         return 0;
-    }
+    else
+        return data[i-1] + arraySum(data, i-1);
+}
+    
     
     /**
      * Fungsi untuk mencari besar suku ke-N dari sebuah deret hitung
@@ -86,8 +109,13 @@ public class Rekursif {
      * @return 
      */
     public static int deretHitung(int awal, int selisih, int indeks_suku){
-        return 0;
-    }
+       
+    if(indeks_suku == 1)
+        return awal;
+    else
+        return deretHitung(awal, selisih, indeks_suku-1) + selisih;
+}
+    
     
     /**
      * Fungsi pembuat data larik deret hitung
@@ -97,6 +125,14 @@ public class Rekursif {
      * @return 
      */
     public static int[] getDeretHitung(int awal, int selish, int indeks_suku){
-        return null;
+       
+    int[] data = new int[indeks_suku + 1];
+
+    for(int i=0;i<=indeks_suku;i++){
+        data[i] = deretHitung(awal, selish, i+1);
     }
+
+    return data;
 }
+    }
+
