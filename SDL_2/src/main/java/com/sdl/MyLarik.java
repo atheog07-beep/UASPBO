@@ -121,7 +121,12 @@ public class MyLarik {
      * @return 
      */
     public double getLoopSum(int indeks){
-        return 0;
+        double sum = 0;
+        for (int i = 0; i < indeks; i++) {
+            double d = data[i];
+            sum = sum+d;
+        }
+        return sum;
     }
     
     /**
@@ -130,6 +135,9 @@ public class MyLarik {
      * @return 
      */
     public double getRekursifSum(int indeks){
-        return 0;
+        if (indeks ==0)
+            return data[indeks];
+        else
+            return data[indeks]+getRekursifSum(indeks-1);
     }
 }
