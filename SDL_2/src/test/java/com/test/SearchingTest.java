@@ -71,7 +71,7 @@ public class SearchingTest {
         assertEquals(-1,test.interpolationSearch(100));
         
         double[] data1 = {55,4,1,100,2,15,13};
-        Arrays.sort(data);
+        Arrays.sort(data1);
         MyLarik test1 = new MyLarik(data1);
         assertEquals(0,test.interpolationSearch(1));
         assertEquals(-1,test.interpolationSearch(20));
