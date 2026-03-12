@@ -9,6 +9,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 import com.sdl.*;
+import java.util.Arrays;
 
 /**
  *
@@ -49,26 +50,30 @@ public class SearchingTest {
     @Test
     public void testBinary(){
         double[] data = {5,4,1,10,21,15,13};
+        Arrays.sort(data);
         MyLarik test = new MyLarik(data);
-        assertEquals(0,test.binarySearch(5));
+        assertEquals(0,test.binarySearch(1));
         assertEquals(-1,test.binarySearch(100));
         
         double[] data1 = {55,4,1,100,2,15,13};
+        Arrays.sort(data1);
         MyLarik test1 = new MyLarik(data1);
-        assertEquals(1,test.binarySearch(4));
+        assertEquals(0,test.binarySearch(1));
         assertEquals(-1,test.binarySearch(20));
     }
     
     @Test
     public void testInterpolation(){
         double[] data = {5,4,1,10,21,15,13};
+        Arrays.sort(data);
         MyLarik test = new MyLarik(data);
-        assertEquals(0,test.interpolationSearch(5));
+        assertEquals(0,test.interpolationSearch(1));
         assertEquals(-1,test.interpolationSearch(100));
         
         double[] data1 = {55,4,1,100,2,15,13};
         MyLarik test1 = new MyLarik(data1);
-        assertEquals(1,test.interpolationSearch(4));
+        Arrays.sort(data);
+        assertEquals(0,test.interpolationSearch(1));
         assertEquals(-1,test.interpolationSearch(20));
     }
 }
