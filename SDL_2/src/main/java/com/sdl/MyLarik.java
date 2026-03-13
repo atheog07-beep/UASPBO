@@ -121,14 +121,24 @@ public class MyLarik {
      * @return 
      */
     public double getLoopSum(int indeks){
+
     double jumlah = 0;
 
     for(int i = 0; i <= indeks; i++){
         jumlah = jumlah + data[i];
     }
+        double sum = 0;
+        for (int i = 0; i < indeks; i++) {
+            double d = data[i];
+            sum = sum+d;
+        }
+        return sum;
+// origin/master
+    }
 
     return jumlah;
 }
+
     
     
     /**
@@ -137,12 +147,24 @@ public class MyLarik {
      * @return 
      */
     public double getRekursifSum(int indeks){
+    // HEAD
       
     if(indeks == 0)
         return data[0];
     else
         return data[indeks] + getRekursifSum(indeks-1);
+    
+        if (indeks ==0)
+            return data[indeks];
+        else
+            return data[indeks]+getRekursifSum(indeks-1);
+    }
+
+       //>>>>>>> origin/master
+    
+  public double cetakData {
+
 }
-}  
+ 
 
 
