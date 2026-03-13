@@ -140,4 +140,28 @@ public class MyLarik {
         else
             return data[indeks]+getRekursifSum(indeks-1);
     }
+
+    /**
+     * Fungsi cetak data
+     */
+    public void cetakData() {
+        for (int i = 0; i < data.length; i++) {
+            double d = data[i];
+            System.out.println(d);
+        }
+    }
+
+    /**
+     * Fungsi cari sequential
+     * @param x
+     * @return 
+     */
+    public int sequentialSearch(double x) {
+        for (int i = 0; i < data.length; i++) {
+            double d = data[i];
+            if (x == d)
+                return i;
+        }
+        return -1;
+    }
 }
