@@ -116,7 +116,7 @@ public class MyStringLarik {
         return -1;
     }
 
-    public Object isStringExist(String input) {
+    public boolean isStringExist(String input) {
         if(this.sequentialSearch(input)==-1)
             return false;
         else
