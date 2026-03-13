@@ -111,4 +111,15 @@ public class MyStringLarik {
         }
         return sum;       
     }
+
+    public int sequentialSearch(String input) {
+        return -1;
+    }
+
+    public Object isStringExist(String input) {
+        if(this.sequentialSearch(input)==-1)
+            return false;
+        else
+            return true;
+    }
 }
