@@ -121,25 +121,13 @@ public class MyLarik {
      * @return 
      */
     public double getLoopSum(int indeks){
-
-    double jumlah = 0;
-
-    for(int i = 0; i <= indeks; i++){
-        jumlah = jumlah + data[i];
-    }
         double sum = 0;
         for (int i = 0; i < indeks; i++) {
             double d = data[i];
             sum = sum+d;
         }
         return sum;
-// origin/master
     }
-
-    return jumlah;
-}
-
-    
     
     /**
      * Fungsi untuk menghitung total jumlah data dengan pendekatan rekursif
@@ -147,24 +135,45 @@ public class MyLarik {
      * @return 
      */
     public double getRekursifSum(int indeks){
-    // HEAD
-      
-    if(indeks == 0)
-        return data[0];
-    else
-        return data[indeks] + getRekursifSum(indeks-1);
-    
         if (indeks ==0)
             return data[indeks];
         else
             return data[indeks]+getRekursifSum(indeks-1);
     }
-
-       //>>>>>>> origin/master
+    public void cetakData(){
+    System.out.print("Data dalam array: ");
+    for(int i = 0; i < data.length; i++){
+        System.out.print(data[i] + " ");
+    }
+    System.out.println();
     
-  public double cetakData {
+    }
+      public int sequentialSearch(double data_cari){
+    for(int i = 0; i < data.length; i++){
+        if(data[i] == data_cari){
+            return i;
+        }
+    }
+    return -1;
+   }
 
+    public int binarySearch(double data_cari){
+    int awal = 0;
+    int akhir = data.length - 1;
+
+    while(awal <= akhir){
+        int tengah = (awal + akhir) / 2;
+
+        if(data[tengah] == data_cari){
+            return tengah;
+        }
+        else if(data[tengah] > data_cari){
+            akhir = tengah - 1;
+        }
+        else{
+            awal = tengah + 1;
+        }
+    }
+    return -1;
 }
- 
-
-
+}
