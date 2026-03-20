@@ -26,6 +26,11 @@ public class MyStringLarik {
         this.size = size;
         this.data = new String[size];
     }
+    
+    public MyStringLarik(String[] data){
+        this.data = data;
+        this.size = data.length;
+    }
 
     /**
      * @return the size
@@ -55,7 +60,7 @@ public class MyStringLarik {
         this.data = data;
     }
     
-        /**
+     /**
      * Fungsi untuk mengisi suatu nilai di larik data
      * @param indeks
      * @param value 

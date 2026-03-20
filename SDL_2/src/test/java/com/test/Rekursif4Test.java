@@ -26,7 +26,8 @@ public class Rekursif4Test {
     @Test
     public void test1(){
         int[] hasil = {1,4,7,10,13};
-        int[] data = Rekursif.getDeretHitung(1, 3, 4);
+        int[] awal = new int[5];
+        int[] data = Rekursif.getDeretHitung(awal,1, 3, 4);
         assertArrayEquals(hasil,data);
     }
     

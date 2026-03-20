@@ -82,11 +82,11 @@ public class MyLarik {
      * @return 
      */
     public double getValue(int indeks){
-        if (indeks > size)
-            return -1;
-        else
-            return this.data[indeks];
-    }
+    if (indeks < 0 || indeks >= size)
+        return -1;
+
+    return this.data[indeks];
+}
     
     /**
      * Fungsi menghitung rerata larik data. Asumsi semua data sudah terisi
@@ -120,42 +120,87 @@ public class MyLarik {
      * @param indeks
      * @return 
      */
-    public double getLoopSum(int indeks){
-        double sum = 0;
-        for (int i = 0; i < indeks; i++) {
-            double d = data[i];
-            sum = sum+d;
-        }
-        return sum;
+   public double getLoopSum(int indeks){
+    double sum = 0;
+    for (int i = 0; i <= indeks; i++) {
+        sum += data[i];
     }
-    
+    return sum;
+}
     /**
      * Fungsi untuk menghitung total jumlah data dengan pendekatan rekursif
      * @param indeks
      * @return 
      */
     public double getRekursifSum(int indeks){
-        if (indeks ==0)
-            return data[indeks];
+      if (indeks < 0)
+        return 0;
         else
             return data[indeks]+getRekursifSum(indeks-1);
     }
-    public void cetakData(){
-    System.out.print("Data dalam array: ");
-    for(int i = 0; i < data.length; i++){
-        System.out.print(data[i] + " ");
+
+    /**
+     * Fungsi cetak data
+     */
+    public void cetakData() {
+        for (int i = 0; i < data.length; i++) {
+            double d = data[i];
+            System.out.println(d);
+        }
     }
-    System.out.println();
+
+    /**
+     * Fungsi cari sequential
+     * @param x
+     * @return 
+     */
+    public int sequentialSearch(double x) {
+        for (int i = 0; i < data.length; i++) {
+            double d = data[i];
+            if (x == d)
+                return i;
+        }
+        return -1;
+    }
+
+    /**
+     * Fungsi interpolationSearch
+     */
+
+    public int interpolationSearch(double data_cari){
+     int low = 0;
+    int high = data.length - 1;
+
+    while (low <= high && data_cari >= data[low] && data_cari <= data[high]) {
+
     
-    }
-      public int sequentialSearch(double data_cari){
-    for(int i = 0; i < data.length; i++){
-        if(data[i] == data_cari){
-            return i;
+        if (data[high] == data[low]) {
+            if (data[low] == data_cari)
+                return low;
+            else
+                return -1;
+        }
+
+        // rumus interpolation
+        int mid = low + (int)((data_cari - data[low]) * (high - low) /
+                (data[high] - data[low]));
+
+        // jika ditemukan
+        if (data[mid] == data_cari) {
+            return mid;
+        }
+
+        // jika data lebih besar maka geser ke kanan
+        if (data[mid] < data_cari) {
+            low = mid + 1;
+        } 
+        // jika data lebih kecil maka geser ke kiri
+        else {
+            high = mid - 1;
         }
     }
     return -1;
-   }
+}
 
     public int binarySearch(double data_cari){
     int awal = 0;
@@ -176,4 +221,5 @@ public class MyLarik {
     }
     return -1;
 }
+    
 }
