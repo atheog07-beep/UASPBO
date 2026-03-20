@@ -119,17 +119,31 @@ public class Rekursif {
     
     /**
      * Fungsi pembuat data larik deret hitung
-     * @param data_awal
      * @param awal
      * @param selish
      * @param indeks_suku
      * @return 
      */
-    public static int[] getDeretHitung(int[] data_awal,int awal, int selish, int indeks_suku){
-        return null;
+    public static int[] getDeretHitung(int awal, int selish, int indeks_suku){
+       
+    int[] data = new int[indeks_suku + 1];
+
+    for(int i=0;i<=indeks_suku;i++){
+        data[i] = deretHitung(awal, selish, i+1);
     }
 
     return data;
+}
+
+   public static int[] getDeretHitung(int[] awal, int start, int selisih, int lastIndex) {
+    
+    awal[0] = start;
+
+    for (int i = 1; i < awal.length; i++) {
+        awal[i] = awal[i - 1] + selisih;
+    }
+
+    return awal;
 }
     }
 

@@ -9,6 +9,7 @@ package com.sdl;
  * Kelas ini merupakan kelas untuk memodelkan rangkaian data string.
  * @author puspa
  */
+
 public class MyStringLarik {
     // size/panjang larik dengan tipe data int
     private int size; // ukuran larik
@@ -110,5 +111,34 @@ public class MyStringLarik {
             }
         }
         return sum;       
+    }
+
+    public int sequentialSearch(String adi) {
+        for (int i = 0; i < data.length; i++) {
+            if (data[i].equals(adi)) {
+                return i;
+            }
+        }
+        return -1;
+    }
+
+    public int binarySearch(String adi) {
+        int low = 0;
+        int high = data.length - 1;
+
+        while (low <= high) {
+            int mid = (low + high) / 2;
+
+            int hasil = data[mid].compareTo(adi);
+
+            if (hasil == 0) {
+                return mid;
+            } else if (hasil > 0) {
+                high = mid - 1;
+            } else {
+                low = mid + 1;
+            }
+        }
+        return -1;
     }
 }
