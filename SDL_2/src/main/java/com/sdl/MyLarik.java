@@ -120,11 +120,17 @@ public class MyLarik {
      * @param indeks
      * @return 
      */
+
    public double getLoopSum(int indeks){
     double sum = 0;
+
+    if (indeks >= size)
+        indeks = size - 1;
+
     for (int i = 0; i <= indeks; i++) {
         sum += data[i];
     }
+
     return sum;
 }
     /**
@@ -132,12 +138,12 @@ public class MyLarik {
      * @param indeks
      * @return 
      */
-    public double getRekursifSum(int indeks){
-      if (indeks < 0)
+   public double getRekursifSum(int indeks){
+    if (indeks < 0)
         return 0;
-        else
-            return data[indeks]+getRekursifSum(indeks-1);
-    }
+    else
+        return data[indeks] + getRekursifSum(indeks - 1);
+}
 
     /**
      * Fungsi cetak data
@@ -161,8 +167,10 @@ public class MyLarik {
                 return i;
         }
         return -1;
+
     }
 
+   
     /**
      * Fungsi interpolationSearch
      */

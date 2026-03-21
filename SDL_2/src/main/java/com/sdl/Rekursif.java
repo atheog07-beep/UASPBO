@@ -71,17 +71,19 @@ public class Rekursif {
      * Fungsi deret fibonaci dengan masukan suku ke-1, suku ke-2 dan 
      * @param suku1
      * @param suku2
-     * @param jumlahSuku
+     * @param sukuKe_N
      * @return 
      */
     public static int fibonaci(int suku1, int suku2, int sukuKe_N){
        
-    if(sukuKe_N == 1)
-        return suku1;
-    else if(sukuKe_N == 2)
-        return suku2;
-    else
-        return fibonaci(suku1, suku2, sukuKe_N-1) + fibonaci(suku1, suku2, sukuKe_N-2);
+        switch (sukuKe_N) {
+            case 1:
+                return suku1;
+            case 2:
+                return suku2;
+            default:
+                return fibonaci(suku1, suku2, sukuKe_N-1) + fibonaci(suku1, suku2, sukuKe_N-2);
+        }
 }
     
     /**
@@ -105,7 +107,7 @@ public class Rekursif {
      * deretnya : [1,4,7,10,13], maka luarannya = 13
      * @param awal
      * @param selisih
-     * @param jumlah_suku
+     * @param indeks_suku
      * @return 
      */
     public static int deretHitung(int awal, int selisih, int indeks_suku){
@@ -120,23 +122,12 @@ public class Rekursif {
     /**
      * Fungsi pembuat data larik deret hitung
      * @param awal
-     * @param selish
-     * @param indeks_suku
+     * @param start
      * @return 
      */
-    public static int[] getDeretHitung(int awal, int selish, int indeks_suku){
-       
-    int[] data = new int[indeks_suku + 1];
 
-    for(int i=0;i<=indeks_suku;i++){
-        data[i] = deretHitung(awal, selish, i+1);
-    }
-
-    return data;
-}
-
-   public static int[] getDeretHitung(int[] awal, int start, int selisih, int lastIndex) {
-    
+ 
+  public static int[] getDeretHitung(int[] awal, int start, int selisih, int lastIndex) {
     awal[0] = start;
 
     for (int i = 1; i < awal.length; i++) {
@@ -145,5 +136,4 @@ public class Rekursif {
 
     return awal;
 }
-    }
-
+}

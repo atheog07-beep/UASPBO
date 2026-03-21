@@ -88,8 +88,7 @@ public class MyStringLarik {
      * @return 
      */
     public boolean isExist(String value){
-        for (int i = 0; i < data.length; i++) {
-            String string = data[i];
+        for (String string : data) {
             if (string.equals(value))
                 return true;
         }
@@ -104,14 +103,14 @@ public class MyStringLarik {
     public int getNumbers(String value){
         int sum = 0;
         if(isExist(value)){
-            for (int i = 0; i < data.length; i++) {
-                String string = data[i];
+            for (String string : data) {
                 if (string.equals(value))
                     sum = sum+1;
             }
         }
         return sum;       
     }
+
 
     public int sequentialSearch(String adi) {
         for (int i = 0; i < data.length; i++) {
@@ -141,4 +140,9 @@ public class MyStringLarik {
         }
         return -1;
     }
+ public boolean isStringExist(String input) {
+    return sequentialSearch(input) != -1;
 }
+}
+
+  
