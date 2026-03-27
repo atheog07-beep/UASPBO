@@ -240,5 +240,19 @@ public class MyLarik {
         }
         return -1;
     }
+    
+    /**
+     * Fungsi untuk pertukaran data
+     * @param data
+     * @param indeks_a
+     * @param indeks_b
+     * @return 
+     */
+    public static double[] getChangeData(double[] data, int indeks_a, int indeks_b){
+        double temp = data[indeks_a];
+        data[indeks_a] = data[indeks_b];
+        data[indeks_b] = temp;
+        return data;
+    }
 
 }
