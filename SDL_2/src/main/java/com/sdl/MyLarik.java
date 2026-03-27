@@ -295,4 +295,12 @@ public class MyLarik {
             return indeks_max;
         }
     }
+
+    public void insertSort() {
+        
+    }
+
+    public void bubleSort() {
+        
+    }
 }
