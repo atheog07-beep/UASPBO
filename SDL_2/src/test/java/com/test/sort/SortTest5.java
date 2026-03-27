@@ -8,24 +8,25 @@ package com.test.sort;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
-
+import com.sdl.MyLarik;
 /**
  *
  * @author puspa
  */
-public class SortTest4 {
+public class SortTest5 {
     
-    public SortTest4() {
+    public SortTest5() {
     }
     
     @BeforeEach
     public void setUp() {
     }
+    
     @Test
     public void testSort(){
         double[] data = {5,4,1,10,21,15,13};
         MyLarik test = new MyLarik(data);
-        test.bubleSort();
+        test.insertSort();
         test.cetakData();
     }
 }
