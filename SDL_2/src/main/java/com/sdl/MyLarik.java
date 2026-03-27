@@ -255,4 +255,44 @@ public class MyLarik {
         return data;
     }
 
+    /**
+     * Fungsi untuk cari data maksimal denagn return indeks
+     * @param data
+     * @return 
+     */
+    public static int getMaxData(double[] data){
+        double max = data[0];
+        int indeks_max = 0;
+        for (int i = 1; i < data.length; i++) {
+            double d = data[i];
+            if (max < data[i]){
+                max = data[i];
+                indeks_max = i;
+            }
+        }
+        return indeks_max;
+    }
+    /**
+     * Fungsi cari data maksimal
+     * @param data
+     * @param indeks_awal
+     * @param indeks_akhir
+     * @return 
+     */
+    public static int getMaxData(double[] data, int indeks_awal, int indeks_akhir){
+        if (indeks_akhir > data.length )
+            return -1;
+        else{
+            double max = data[indeks_awal];
+            int indeks_max = 0;
+            for (int i = indeks_awal; i <= indeks_akhir; i++) {
+                double d = data[i];
+                if (max < data[i]){
+                    max = data[i];
+                    indeks_max = i;
+                }
+            }
+            return indeks_max;
+        }
+    }
 }
