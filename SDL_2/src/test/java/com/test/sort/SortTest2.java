@@ -23,7 +23,7 @@ public class SortTest2 {
     }
     
     @Test
-    public void sortTest(){
+    public void testSort(){
         double[] data = {5,4,1,10,21,15,13};
         int maxIndeks = MyLarik.getMaxData(data);
         assertEquals(4,maxIndeks);
