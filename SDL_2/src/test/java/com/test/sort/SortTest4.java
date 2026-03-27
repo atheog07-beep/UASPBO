@@ -5,7 +5,6 @@
  */
 package com.test.sort;
 
-import com.sdl.MyLarik;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
@@ -14,19 +13,19 @@ import static org.junit.jupiter.api.Assertions.*;
  *
  * @author puspa
  */
-public class SortTest3 {
+public class SortTest4 {
     
-    public SortTest3() {
+    public SortTest4() {
     }
     
     @BeforeEach
     public void setUp() {
     }
-    
     @Test
-    public void sortTest(){
+    public void testSort(){
         double[] data = {5,4,1,10,21,15,13};
-        int maxIndeks = MyLarik.getMaxData(data,1,4);
-        assertEquals(4,maxIndeks);
+        MyLarik test = MyLarik(data);
+        test.bubleSort();
+        test.cetakData();
     }
 }
