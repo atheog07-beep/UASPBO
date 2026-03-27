@@ -56,5 +56,14 @@ public class Student {
     public void setName(String name) {
         this.name = name;
     }
-      
+
+    @Override
+    public String toString() {
+        return "Student{" + "id=" + id + ", name=" + name + '}';
+    }
+    
+    public static void main(String[] args){
+        Student test = new Student("007","James Bond");
+        System.out.println("Data = "+test);
+    }
 }
