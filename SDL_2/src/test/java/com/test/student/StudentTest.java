@@ -42,6 +42,6 @@ public class StudentTest {
         
         larik.nameSort();
         larik.printData();
-        assertEquals("Farid",larik.getValue(4).getName());
+        assertEquals("David",larik.getValue(2).getName());
     }
 }
