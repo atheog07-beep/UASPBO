@@ -54,7 +54,7 @@ public class MyItemLarik {
      * @param indeks
      */
     public void append(MyItem item, int indeks){
-        
+        this.data[indeks]= item;
     }
     
     /**
