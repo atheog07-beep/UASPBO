@@ -83,4 +83,12 @@ public class MyItemLarik {
     public void itemSort(int type){
         
     }
+    
+    /**
+     * Fungsi untuk menghitung jumlahan dari atribut numbers pada item yang sama
+     * @return 
+     */
+    public MyItemLarik getItemSum(){
+        return null;
+    }
 }
