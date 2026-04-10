@@ -147,7 +147,7 @@ public class MyItemLarikTest {
         test1.append(item20, 1);
         test1.append(item30, 0);
         // ambil data Size
-        test.itemSort(0);
+        test.itemSort(1);
         MyItem[] testLarik1 = test1.getData();
         assertEquals("Informatika",testLarik[2].getItem());
         
