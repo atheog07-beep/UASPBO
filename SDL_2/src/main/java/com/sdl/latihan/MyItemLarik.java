@@ -73,4 +73,14 @@ public class MyItemLarik {
     public int itemSearch(String item){
         return -1;
     }
+    
+    /**
+     * Fungsi sorting berdasarkan masukan tipe.
+     * tipe = 0, sorting berdasar String item
+     * tipe = 1, sorting berdasar int numerik;
+     * @param type 
+     */
+    public void itemSort(int type){
+        
+    }
 }
