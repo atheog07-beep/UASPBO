@@ -42,8 +42,8 @@ public class MyItemLarikTest {
         test.append(item5, 4);
         // ambil data
         MyItem[] testLarik = test.getData();
-        assertEquals("Farmasi",testLarik[4]);
-        assertEquals("Teknik Mesin",testLarik[3]);
+        assertEquals("Farmasi",testLarik[4].getItem());
+        assertEquals("Teknik Mesin",testLarik[3].getItem());
     }
     
     @Test
