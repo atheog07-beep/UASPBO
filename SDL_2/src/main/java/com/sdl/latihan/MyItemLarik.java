@@ -76,8 +76,8 @@ public class MyItemLarik {
     
     /**
      * Fungsi sorting berdasarkan masukan tipe.
-     * tipe = 0, sorting berdasar String item
-     * tipe = 1, sorting berdasar int numerik;
+     * tipe = 0, sorting berdasar String item secara ascending (kecil ke besar)
+     * tipe = 1, sorting berdasar int numerik; secara ascending (kecil ke besar)
      * @param type 
      */
     public void itemSort(int type){
