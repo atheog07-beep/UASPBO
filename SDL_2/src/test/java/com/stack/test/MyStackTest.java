@@ -47,7 +47,7 @@ public class MyStackTest {
         // test stack isi satu node
         stack.push(node1);
         MyNode node5 = stack.pop();
-        assertEquals("MyItem{item=A, numbers=4}",node5.toString());
+        assertEquals("A = 4}",node5.toString());
         MyNode node6 = stack.pop();
         assertEquals(null,node6);
         
@@ -61,7 +61,7 @@ public class MyStackTest {
         assertEquals(4,stack.getSize());
         assertEquals(false,stack.isEmpty());
         node5 = stack.pop(); // pop stack
-        assertEquals("MyItem{item=D, numbers=1}",node5.toString());
+        assertEquals("D = 1}",node5.toString());
         
     }
 }
