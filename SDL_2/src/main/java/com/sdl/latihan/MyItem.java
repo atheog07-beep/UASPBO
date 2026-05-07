@@ -58,7 +58,7 @@ public class MyItem {
 
     @Override
     public String toString() {
-        return "MyItem{" + "item=" + item + ", numbers=" + numbers + '}';
+        return  item + " = " + numbers;
     }
     
 }
