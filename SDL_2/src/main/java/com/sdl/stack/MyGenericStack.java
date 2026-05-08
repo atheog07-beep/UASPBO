@@ -64,7 +64,10 @@ public class MyGenericStack<T> {
      * @return 
      */
     public boolean isEmpty(){
-        return false;
+        if (this.last==null)
+            return true;
+        else
+            return false;
     }
     
         /**
@@ -114,11 +117,12 @@ public class MyGenericStack<T> {
         MyGenericNode<MyItem> node4 = new MyGenericNode<MyItem>(item4,null);
         
         MyGenericStack<MyGenericNode<MyItem>> stack = new MyGenericStack<MyGenericNode<MyItem>>();
-        System.out.println(stack.isEmpty());
+        System.out.println("isEmpty = "+stack.isEmpty());
         
         stack.push(node1);
+        System.out.println("isEmpty = "+stack.isEmpty());
         System.out.println(stack.getSize());
-        MyGenericNode<MyItem> node10 = stack.pop();
-        System.out.println(node10.getData().toString());
+//        MyGenericNode<MyItem> node10 = stack.pop();
+//        System.out.println(node10.getData().toString());
     }
 }
