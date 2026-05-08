@@ -64,7 +64,7 @@ public class MyGenericStack<T> {
      * @return 
      */
     public boolean isEmpty(){
-        return true;
+        return false;
     }
     
         /**
@@ -104,5 +104,21 @@ public class MyGenericStack<T> {
         // test node
         String result = node1.getData().toString();
         System.out.println(result);
+        
+        //push ke stack generic
+        MyItem item2 = new MyItem("B",3);
+        MyItem item3 = new MyItem("C",2);
+        MyItem item4 = new MyItem("D",1);
+        MyGenericNode<MyItem> node2 = new MyGenericNode<MyItem>(item2,null);
+        MyGenericNode<MyItem> node3 = new MyGenericNode<MyItem>(item3,null);
+        MyGenericNode<MyItem> node4 = new MyGenericNode<MyItem>(item4,null);
+        
+        MyGenericStack<MyGenericNode<MyItem>> stack = new MyGenericStack<MyGenericNode<MyItem>>();
+        System.out.println(stack.isEmpty());
+        
+        stack.push(node1);
+        System.out.println(stack.getSize());
+        MyGenericNode<MyItem> node10 = stack.pop();
+        System.out.println(node10.getData().toString());
     }
 }
