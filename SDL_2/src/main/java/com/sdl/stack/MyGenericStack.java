@@ -79,9 +79,10 @@ public class MyGenericStack<T> {
         if (isEmpty()){
             last=node;
         } else{
-            //stack tidak kosong
+            // stack tidak kosong
             
         }
+        this.size++;
     }
     
     /**
