@@ -6,19 +6,30 @@
 package com.sdl.list;
 
 import com.sdl.latihan.MyItem;
+import com.sdl.stack.MyNode;
 
 /**
  *
  * @author puspa
  */
-public class MyNode extends MyItem{
-    private MyNode next; // link ke sesama obyek MyNode
+public class List{
+    private MyNode first; 
+    private MyNode last;
+    private String name;
 
     /**
      * Konstruktor
      */
-    public MyNode() {
+    public List() {
+        this.first=null;
+        this.last = null;
     }
     
-    
+    /**
+     * Fungsi cek list kosong
+     * @return 
+     */
+    public boolean isEmpty(){
+        return true;
+    }
 }
