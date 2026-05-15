@@ -31,6 +31,16 @@ public class ListNode {
     }
 
     /**
+     * Konstruktor
+     * @param item
+     * @param numbers 
+     */
+    public ListNode(String item, int numbers){
+        this.data.setItem(item);
+        this.data.setNumbers(numbers);
+        this.next=null;
+    }
+    /**
      * @return the data
      */
     public MyItem getData() {
