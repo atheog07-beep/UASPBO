@@ -36,6 +36,7 @@ public class ListNode {
      * @param numbers 
      */
     public ListNode(String item, int numbers){
+        this.data = new MyItem();
         this.data.setItem(item);
         this.data.setNumbers(numbers);
         this.next=null;

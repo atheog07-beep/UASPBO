@@ -87,6 +87,7 @@ public class List{
             first = node;
             last = node;
         } else{
+            node.setNext(first);
             first = node;
         }
     }
@@ -96,7 +97,13 @@ public class List{
      * @param item 
      */
     public void addLast(ListNode node){
-        
+        if (isEmpty()){
+            first = node;
+            last = node;
+        } else{
+            last.setNext(node);
+            last = node;
+        }
     }
     
     /**
@@ -104,7 +111,22 @@ public class List{
      * @return 
      */
     public ListNode deleteFirst(){
-        return null;
+        // isi senarai baru 1
+        if(!isEmpty()){
+            // isi senarai baru 1
+            if(first == last){
+                return first;
+            } else{
+                // isi senarai lebih 1
+                ListNode node = first;
+                first = first.getNext();
+                node.setNext(null);
+                return node;
+            }
+        } else{
+            // senarai kosong
+            return null;
+        }
     }
     
     /**
@@ -134,7 +156,13 @@ public class List{
      * @return 
      */
     public int getSumOfTotalNumbers(){
-        return 0;
+        ListNode temp = first;
+        int sum = 0;
+        while(temp !=null){
+            sum = sum + temp.getData().getNumbers();
+            temp = temp.getNext();
+        }
+        return sum;
     }
     
     /**
@@ -142,6 +170,12 @@ public class List{
      * @return 
      */
     public String toString(){
-        return null;
+        ListNode temp = first;
+        String result = "";
+        while(temp !=null){
+            result = result+temp.getData().toString();
+            temp = temp.getNext();
+        }
+        return result;
     }
 }
