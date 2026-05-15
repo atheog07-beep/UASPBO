@@ -115,7 +115,7 @@ public class ListTest {
         assertEquals(2,list.getSize());
         
         ListNode node40 = list.getLast();
-        assertEquals("D = 1",node40.toString());
+        assertEquals("D = 1",node40.getData().toString());
         assertEquals(1,list.getSize());
     }
 
@@ -130,17 +130,17 @@ public class ListTest {
         assertEquals(0,list.getSize());
         list.addFirst(node1);
         assertEquals(1,list.getSize());
-        assertEquals("A = 4",list.toString());
+        assertEquals("A = 4",list.getFirst().toString());
         
         list.addLast(node4);
         assertEquals(2,list.getSize());
         
         ListNode node40 = list.getLast();
-        assertEquals("D = 1",node40.toString());
+        assertEquals("D = 1",node40.getData().toString());
         assertEquals(1,list.getSize());
         
         ListNode node10 = list.getFirst();
-        assertEquals("A = 4",node10.toString());
+        assertEquals("A = 4",node10.getData().toString());
         assertEquals(true,list.isEmpty());
     }
     
@@ -163,7 +163,7 @@ public class ListTest {
         assertEquals(4,list.getSize());
         
         ListNode first = list.getFirst();
-        assertEquals("A = 4",first.toString());
+        assertEquals("A = 4",first.getData().toString());
     }
     
         @Test
@@ -185,7 +185,7 @@ public class ListTest {
         assertEquals(4,list.getSize());
         
         ListNode last = list.getLast();
-        assertEquals("D = 1",last.toString());        
+        assertEquals("D = 1",last.getData().toString());        
     }
 
     @Test
