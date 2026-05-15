@@ -72,7 +72,10 @@ public class List{
      * @return 
      */
     public boolean isEmpty(){
-        return true;
+        if ((this.first == null) && (this.last == null))
+            return true;
+        else 
+            return false;
     }
     
     /**
@@ -80,7 +83,12 @@ public class List{
      * @param item 
      */
     public void addFirst(ListNode node){
-        
+        if (isEmpty()){
+            first = node;
+            last = node;
+        } else{
+            first = node;
+        }
     }
     
     /**
@@ -112,7 +120,13 @@ public class List{
      * @return 
      */
     public int getSize(){
-        return 0;
+        ListNode temp = first;
+        int size = 0;
+        while(temp !=null){
+            size++;
+            temp = temp.getNext();
+        }
+        return size;
     }
     
     /**
