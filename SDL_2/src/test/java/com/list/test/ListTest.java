@@ -94,7 +94,7 @@ public class ListTest {
         list.addLast(node4);
         assertEquals(2,list.getSize());
         
-        ListNode node10 = list.getFirst();
+        ListNode node10 = list.deleteFirst();
         assertEquals("A = 4",node10.getData().toString());
     }
 
@@ -114,7 +114,7 @@ public class ListTest {
         list.addLast(node4);
         assertEquals(2,list.getSize());
         
-        ListNode node40 = list.getLast();
+        ListNode node40 = list.deleteLast();
         assertEquals("D = 1",node40.getData().toString());
         assertEquals(1,list.getSize());
     }
@@ -135,11 +135,11 @@ public class ListTest {
         list.addLast(node4);
         assertEquals(2,list.getSize());
         
-        ListNode node40 = list.getLast();
+        ListNode node40 = list.deleteLast();
         assertEquals("D = 1",node40.getData().toString());
         assertEquals(1,list.getSize());
         
-        ListNode node10 = list.getFirst();
+        ListNode node10 = list.deleteFirst();
         assertEquals("A = 4",node10.getData().toString());
         assertEquals(true,list.isEmpty());
     }
@@ -162,7 +162,7 @@ public class ListTest {
         assertEquals(false,list.isEmpty());
         assertEquals(4,list.getSize());
         
-        ListNode first = list.getFirst();
+        ListNode first = list.deleteFirst();
         assertEquals("A = 4",first.getData().toString());
     }
     
@@ -184,7 +184,7 @@ public class ListTest {
         assertEquals(false,list.isEmpty());
         assertEquals(4,list.getSize());
         
-        ListNode last = list.getLast();
+        ListNode last = list.deleteLast();
         assertEquals("D = 1",last.getData().toString());        
     }
 
