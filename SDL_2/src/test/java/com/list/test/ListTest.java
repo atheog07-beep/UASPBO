@@ -95,7 +95,7 @@ public class ListTest {
         assertEquals(2,list.getSize());
         
         ListNode node10 = list.getFirst();
-        assertEquals("A = 4",node10.toString());
+        assertEquals("A = 4",node10.getData().toString());
     }
 
     @Test
