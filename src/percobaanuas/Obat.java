@@ -9,5 +9,31 @@ package percobaanuas;
  * @author ath07
  */
 public class Obat {
-    
+     private String NamaObat;
+     private double HargaObat;
+
+    public Obat(String NamaObat, double HargaObat) {
+        this.NamaObat = NamaObat;
+        this.HargaObat = HargaObat;
+    }
+
+    public String getNamaObat() {
+        return NamaObat;
+    }
+
+    public void setNamaObat(String NamaObat) {
+        this.NamaObat = NamaObat;
+    }
+
+    public double getHargaObat() {
+        return HargaObat;
+    }
+
+    public void setHargaObat(double HargaObat) {
+        this.HargaObat = HargaObat;
+    }
+     
+    public String DataObat(){
+        return "";
+    }
 }
