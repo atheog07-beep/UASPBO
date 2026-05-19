@@ -1,0 +1,181 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package com.sdl.list;
+
+
+
+/**
+ *
+ * @author puspa
+ */
+public class List{
+    private ListNode first; 
+    private ListNode last;
+    private String name;
+
+    /**
+     * Konstruktor
+     */
+    public List() {
+        this.first=null;
+        this.last = null;
+    }
+   
+
+    /**
+     * @return the first
+     */
+    public ListNode getFirst() {
+        return first;
+    }
+
+    /**
+     * @param first the first to set
+     */
+    public void setFirst(ListNode first) {
+        this.first = first;
+    }
+
+    /**
+     * @return the last
+     */
+    public ListNode getLast() {
+        return last;
+    }
+
+    /**
+     * @param last the last to set
+     */
+    public void setLast(ListNode last) {
+        this.last = last;
+    }
+
+    /**
+     * @return the name
+     */
+    public String getName() {
+        return name;
+    }
+
+    /**
+     * @param name the name to set
+     */
+    public void setName(String name) {
+        this.name = name;
+    }
+    
+    /**
+     * Fungsi cek list kosong
+     * @return 
+     */
+    public boolean isEmpty(){
+        if ((this.first == null) && (this.last == null))
+            return true;
+        else 
+            return false;
+    }
+    
+    /**
+     * Fungsi tambah item di awal
+     * @param item 
+     */
+    public void addFirst(ListNode node){
+        if (isEmpty()){
+            first = node;
+            last = node;
+        } else{
+            node.setNext(first);
+            first = node;
+        }
+    }
+    
+    /**
+     * Fungsi tambah item di akhir
+     * @param item 
+     */
+    public void addLast(ListNode node){
+        if (isEmpty()){
+            first = node;
+            last = node;
+        } else{
+            last.setNext(node);
+            last = node;
+        }
+    }
+    
+    /**
+     * Fungsi hapus awal
+     * @return 
+     */
+    public ListNode deleteFirst(){
+        // isi senarai baru 1
+        if(!isEmpty()){
+            // isi senarai baru 1
+            if(first == last){
+                return first;
+            } else{
+                // isi senarai lebih 1
+                ListNode node = first;
+                first = first.getNext();
+                node.setNext(null);
+                return node;
+            }
+        } else{
+            // senarai kosong
+            return null;
+        }
+    }
+    
+    /**
+     * Fungsi hapus akhir
+     * @return 
+     */
+    public ListNode deleteLast(){
+        return null;
+    }
+    
+    /**
+     * Fungsi hitung ukuran list
+     * @return 
+     */
+    public int getSize(){
+        ListNode temp = first;
+        int size = 0;
+        while(temp !=null){
+            size++;
+            temp = temp.getNext();
+        }
+        return size;
+    }
+    
+    /**
+     * Fungsi untuk menghitung seluruh atribut numbers dari node
+     * @return 
+     */
+    public int getSumOfTotalNumbers(){
+        ListNode temp = first;
+        int sum = 0;
+        while(temp !=null){
+            sum = sum + temp.getData().getNumbers();
+            temp = temp.getNext();
+        }
+        return sum;
+    }
+    
+    /**
+     * Fungsi untuk mengubah semua node ke string dari node first sampai last.
+     * @return 
+     */
+    public String toString(){
+        ListNode temp = first;
+        String result = "";
+        while(temp !=null){
+            result = result+temp.getData().toString();
+            temp = temp.getNext();
+        }
+        return result;
+    }
+}

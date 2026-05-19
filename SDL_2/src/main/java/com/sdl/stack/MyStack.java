@@ -33,10 +33,13 @@ public class MyStack {
         // cek stack kosong
         if (isEmpty()){
             last=node;
+            this.size=1;
         } else{
             //stack tidak kosong
-            
+            node.setNext(this.last);
+            this.last = node;
         }
+        this.size ++;
     }
     
     /**
@@ -49,8 +52,11 @@ public class MyStack {
             return null;
         } else {
             //stack tidak kosong
-           
-            return null;
+            MyNode result = this.last;
+            this.last = result.getNext();
+            result.setNext(null);
+            this.size --;
+            return result;
         }
     }
     
@@ -67,6 +73,17 @@ public class MyStack {
     public void setSize(int size) {
         this.size = size;
     }
+    
+    /**
+     * Fungsi untuk menghitung total atribut nummbers
+     * @return 
+     */
+    public int getTotalNumbers(){
+        int total = 0;
+        
+        return total;
+    }
+    
     public static void main(String[] args) {
         MyStack stack = new MyStack();
         MyNode node1 = new MyNode(null,"A",4);
@@ -88,7 +105,8 @@ public class MyStack {
         stack.push(node4);
         node5 = stack.pop(); // pop stack
         System.out.println(node5);
-        
+        int result = stack.getTotalNumbers();
+        System.out.println("Total = "+result);
     }
 
     
