@@ -15,11 +15,9 @@ public class Pemeriksaan {
     private Resep Resep;
     private String Tensi;
     private double SuhuTubuh;
-    private double TinggiBadan;
-    private double BeratBadan;
     private int NomorAntrian;
 
-    public Pemeriksaan(String IDPeriksa, String TanggalPeriksa, Pasien pasien, Dokter dokter, String Keluhan, String Diagnosa, Resep Resep, String Tensi, double SuhuTubuh, double TinggiBadan, double BeratBadan, int NomorAntrian) {
+    public Pemeriksaan(String IDPeriksa, String TanggalPeriksa, Pasien pasien, Dokter dokter, String Keluhan, String Diagnosa, Resep Resep, String Tensi, double SuhuTubuh, int NomorAntrian) {
         this.IDPeriksa = IDPeriksa;
         this.TanggalPeriksa = TanggalPeriksa;
         this.pasien = pasien;
@@ -29,8 +27,6 @@ public class Pemeriksaan {
         this.Resep = Resep;
         this.Tensi = Tensi;
         this.SuhuTubuh = SuhuTubuh;
-        this.TinggiBadan = TinggiBadan;
-        this.BeratBadan = BeratBadan;
         this.NomorAntrian = NomorAntrian;
     }
 
@@ -70,18 +66,11 @@ public class Pemeriksaan {
         return SuhuTubuh;
     }
 
-    public double getTinggiBadan() {
-        return TinggiBadan;
-    }
-
-    public double getBeratBadan() {
-        return BeratBadan;
-    }
-
     public int getNomorAntrian() {
         return NomorAntrian;
     }
 
+    
     public void ProsesPeriksa(){
     }
     
