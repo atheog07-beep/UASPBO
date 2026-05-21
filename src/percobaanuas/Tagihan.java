@@ -1,0 +1,43 @@
+package percobaanuas;
+
+/**
+ *
+ * @author asus
+ */
+public class Tagihan {
+    
+    private String IDTagihan;
+    private double JasaDokter;
+    private double JasaAdministrasi;
+    private double TotalTagihan;
+
+    public Tagihan(String IDTagihan, double JasaDokter, double JasaAdministrasi, double TotalTagihan) {
+        this.IDTagihan = IDTagihan;
+        this.JasaDokter = JasaDokter;
+        this.JasaAdministrasi = JasaAdministrasi;
+        this.TotalTagihan = TotalTagihan;
+    }
+
+    public String getIDTagihan() {
+        return IDTagihan;
+    }
+
+    public double getJasaDokter() {
+        return JasaDokter;
+    }
+
+    public double getJasaAdministrasi() {
+        return JasaAdministrasi;
+    }
+
+    public double getTotalTagihan() {
+        return TotalTagihan;
+    }
+    
+    public double HitungTotalTagihan(){
+        return 0;
+    }
+    
+    public void cetakTagihan(){
+    }
+}

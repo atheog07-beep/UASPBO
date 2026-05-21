@@ -1,81 +1,44 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package percobaanuas;
 
-/**
- *
- * @author ath07
- */
 public class Cash implements Pembayaran {
 
     // ---------- Atribut ----------
-    
-    private String idPembayaran;
-    private String namaPasien;
-    private double totalBayar;
-    private double uangBayar;
-    private double kembalian;
+    private double TotalBayar;
+    private double UangdiBayar;
+    private double Kembalian;
+    private boolean SudahdiBayar;
+    private Tagihan tagihan;
 
-    
-    // ---------- Constructor ----------
-    
-    public Cash(String idPembayaran, String namaPasien,
-            double totalBayar, double uangBayar) {
-
-        this.idPembayaran = idPembayaran;
-        this.namaPasien = namaPasien;
-        this.totalBayar = totalBayar;
-        this.uangBayar = uangBayar;
-        this.kembalian = hitungKembalian();
-    }
-
-    
-    // ---------- Getter & Setter ----------
-    
-    public String getIdPembayaran() {
-        return idPembayaran;
-    }
-
-    public void setIdPembayaran(String idPembayaran) {
-        this.idPembayaran = idPembayaran;
-    }
-
-    public String getNamaPasien() {
-        return namaPasien;
-    }
-
-    public void setNamaPasien(String namaPasien) {
-        this.namaPasien = namaPasien;
+    public Cash(double TotalBayar, double UangdiBayar, double Kembalian, boolean SudahdiBayar, Tagihan tagihan) {
+        this.TotalBayar = TotalBayar;
+        this.UangdiBayar = UangdiBayar;
+        this.Kembalian = Kembalian;
+        this.SudahdiBayar = SudahdiBayar;
+        this.tagihan = tagihan;
     }
 
     public double getTotalBayar() {
-        return totalBayar;
+        return TotalBayar;
     }
 
-    public void setTotalBayar(double totalBayar) {
-        this.totalBayar = totalBayar;
-    }
-
-    public double getUangBayar() {
-        return uangBayar;
-    }
-
-    public void setUangBayar(double uangBayar) {
-        this.uangBayar = uangBayar;
+    public double getUangdiBayar() {
+        return UangdiBayar;
     }
 
     public double getKembalian() {
-        return kembalian;
+        return Kembalian;
     }
 
+    public boolean isSudahdiBayar() {
+        return SudahdiBayar;
+    }
+
+    public Tagihan getTagihan() {
+        return tagihan;
+    }
+   
     
     // ---------- Method ----------
-    
-    public double hitungKembalian() {
-        return uangBayar - totalBayar;
-    }
 
     @Override
     public void Bayar() {
@@ -89,7 +52,7 @@ public class Cash implements Pembayaran {
 
     @Override
     public double Total() {
-        return totalBayar;
+        return 0;
     }
 }
 

@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package percobaanuas;
 
 /**
@@ -10,85 +6,30 @@ package percobaanuas;
  */
 public class Pasien {
     
-    private String NIK;
-    private String Nama;
-    private int Umur;
-    private String Alamat;
-    private int JenisKelamin;
-    private String Keluhan;
-    private int NomorAntrian;
+    private MedicalReport NMR;
+    private double TinggiBadan;
+    private double BeratBadan;
 
-    public Pasien(String NIK, String Nama, int Umur, String Alamat, int JenisKelamin, String Keluhan, int NomorAntrian) {
-        this.NIK = NIK;
-        this.Nama = Nama;
-        this.Umur = Umur;
-        this.Alamat = Alamat;
-        this.JenisKelamin = JenisKelamin;
-        this.Keluhan = Keluhan;
-        this.NomorAntrian = NomorAntrian;
+    public Pasien(MedicalReport NMR, double TinggiBadan, double BeratBadan) {
+        this.NMR = NMR;
+        this.TinggiBadan = TinggiBadan;
+        this.BeratBadan = BeratBadan;
     }
 
-    public String getNIK() {
-        return NIK;
+    public MedicalReport getNMR() {
+        return NMR;
     }
 
-    public void setNIK(String NIK) {
-        this.NIK = NIK;
+    public double getTinggiBadan() {
+        return TinggiBadan;
     }
 
-    public String getNama() {
-        return Nama;
-    }
-
-    public void setNama(String Nama) {
-        this.Nama = Nama;
-    }
-
-    public int getUmur() {
-        return Umur;
-    }
-
-    public void setUmur(int Umur) {
-        this.Umur = Umur;
-    }
-
-    public String getAlamat() {
-        return Alamat;
-    }
-
-    public void setAlamat(String Alamat) {
-        this.Alamat = Alamat;
-    }
-
-    public int getJenisKelamin() {
-        return JenisKelamin;
-    }
-
-    public void setJenisKelamin(int JenisKelamin) {
-        this.JenisKelamin = JenisKelamin;
-    }
-
-    public String getKeluhan() {
-        return Keluhan;
-    }
-
-    public void setKeluhan(String Keluhan) {
-        this.Keluhan = Keluhan;
-    }
-
-    public int getNomorAntrian() {
-        return NomorAntrian;
-    }
-
-    public void setNomorAntrian(int NomorAntrian) {
-        this.NomorAntrian = NomorAntrian;
+    public double getBeratBadan() {
+        return BeratBadan;
     }
     
-    public void Daftar(int NomorAntrian){
-}
-    public String toString(){
-    
-        return null;
-    
+    public int getUmur(){
+        return 0;
     }
+
 }

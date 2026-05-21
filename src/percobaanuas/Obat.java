@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package percobaanuas;
 
 /**
@@ -11,29 +7,43 @@ package percobaanuas;
 public class Obat {
      private String NamaObat;
      private double HargaObat;
+     private String MerkObat;
+     private int StockObat;
+     private boolean isKlaimBPJS;
 
-    public Obat(String NamaObat, double HargaObat) {
+    public Obat(String NamaObat, double HargaObat, String MerkObat, int StockObat, boolean isKlaimBPJS) {
         this.NamaObat = NamaObat;
         this.HargaObat = HargaObat;
+        this.MerkObat = MerkObat;
+        this.StockObat = StockObat;
+        this.isKlaimBPJS = isKlaimBPJS;
     }
 
     public String getNamaObat() {
         return NamaObat;
     }
 
-    public void setNamaObat(String NamaObat) {
-        this.NamaObat = NamaObat;
-    }
-
     public double getHargaObat() {
         return HargaObat;
     }
 
-    public void setHargaObat(double HargaObat) {
-        this.HargaObat = HargaObat;
+    public String getMerkObat() {
+        return MerkObat;
+    }
+
+    public int getStockObat() {
+        return StockObat;
+    }
+
+    public boolean isIsKlaimBPJS() {
+        return isKlaimBPJS;
     }
      
-    public String DataObat(){
-        return "";
+    private void KurangStock(int jumlah){
+        
     }
+
+    public void cetakDataObat(){
+    
+}
 }
