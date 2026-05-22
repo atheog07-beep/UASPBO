@@ -49,20 +49,16 @@ public class GenericListTest {
     public void test2(){
         MyItem item1 = new MyItem("A",4);
         MyItem item2 = new MyItem("B",3);
-        GenerikNode<MyItem> node1 = new GenerikNode<MyItem>(item1);
-        GenerikNode<MyItem> node2 = new GenerikNode<MyItem>(item2);
         
         Siswa siswa1 = new Siswa(1,"Puspa");
         Siswa siswa2 = new Siswa(2,"Adi");
-        GenerikNode<Siswa> nodeSiswa1 = new GenerikNode<Siswa>(siswa1);
-        GenerikNode<Siswa> nodeSiswa2 = new GenerikNode<Siswa>(siswa2);
         
         GenerikList<MyItem> testItem = new GenerikList<MyItem>();
         testItem.addFirst(item1);
         assertEquals(false,testItem.isEmpty());
         
         GenerikList<Siswa> testSiswa = new GenerikList<Siswa>();
-        testSiswa.addFirst(nodeSiswa1);
+        testSiswa.addFirst(siswa1);
         assertEquals(true,testSiswa.isEmpty());
         
     }

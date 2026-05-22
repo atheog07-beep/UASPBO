@@ -55,6 +55,13 @@ public class GenerikList<T> {
     }
     
     public void addFirst(T node){
-        
+        GenerikNode<T> tmp = new GenerikNode<T>(node); 
+        if(isEmpty()){
+            this.first=tmp;
+            this.last=tmp;
+        } else{
+            tmp.setNext(this.first);
+            this.first = tmp;
+        }
     }
 }
