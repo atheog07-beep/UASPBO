@@ -59,7 +59,7 @@ public class GenericListTest {
         
         GenerikList<Siswa> testSiswa = new GenerikList<Siswa>();
         testSiswa.addFirst(siswa1);
-        assertEquals(true,testSiswa.isEmpty());
+        assertEquals(false,testSiswa.isEmpty());
         
     }
 }
