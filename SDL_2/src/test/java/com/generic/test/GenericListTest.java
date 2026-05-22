@@ -37,6 +37,13 @@ public class GenericListTest {
         GenerikNode<Siswa> nodeSiswa1 = new GenerikNode<Siswa>(siswa1);
         GenerikNode<Siswa> nodeSiswa2 = new GenerikNode<Siswa>(siswa2);
         
+        GenerikList<MyItem> testItem = new GenerikList<MyItem>();
+        assertEquals(true,testItem.isEmpty());
+        
+        GenerikList<Siswa> testSiswa = new GenerikList<Siswa>();
+        assertEquals(true,testSiswa.isEmpty());
+        
+        
     }
     
 }
