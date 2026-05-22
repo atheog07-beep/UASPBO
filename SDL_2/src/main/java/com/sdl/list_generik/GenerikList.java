@@ -14,12 +14,44 @@ public class GenerikList<T> {
     private GenerikNode<T> last;
 
     public GenerikList() {
+        this.first=null;
+        this.last=null;
     }
 
-    public GenerikList(GenerikNode<T> first, GenerikNode<T> last) {
+
+    /**
+     * @return the first
+     */
+    public GenerikNode<T> getFirst() {
+        return first;
+    }
+
+    /**
+     * @param first the first to set
+     */
+    public void setFirst(GenerikNode<T> first) {
         this.first = first;
+    }
+
+    /**
+     * @return the last
+     */
+    public GenerikNode<T> getLast() {
+        return last;
+    }
+
+    /**
+     * @param last the last to set
+     */
+    public void setLast(GenerikNode<T> last) {
         this.last = last;
     }
     
+    public boolean isEmpty(){
+        if(this.first==null && this.last==null)
+            return true;
+        else
+            return false;
+    }
     
 }
