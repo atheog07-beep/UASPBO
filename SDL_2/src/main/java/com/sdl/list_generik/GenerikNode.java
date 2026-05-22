@@ -5,6 +5,8 @@
  */
 package com.sdl.list_generik;
 
+import com.sdl.latihan.MyItem;
+
 /**
  *
  * @author puspa
@@ -12,4 +14,10 @@ package com.sdl.list_generik;
 public class GenerikNode<T> {
     private T data;
     private GenerikNode next;
+
+    public GenerikNode(T item) {
+        this.data = item;
+    }
+    
+    
 }
