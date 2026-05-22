@@ -1,0 +1,133 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package com.generic.test;
+
+import com.sdl.latihan.MyItem;
+import com.sdl.list_generik.*;
+import com.sdl.sekolah.Siswa;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
+
+/**
+ *
+ * @author puspa
+ */
+public class GenericListTest {
+    
+    public GenericListTest() {
+    }
+    
+    @BeforeEach
+    public void setUp() {
+    }
+    
+    @Test
+    public void test1(){
+        MyItem item1 = new MyItem("A",4);
+        MyItem item2 = new MyItem("B",3);
+        GenerikNode<MyItem> node1 = new GenerikNode<MyItem>(item1);
+        GenerikNode<MyItem> node2 = new GenerikNode<MyItem>(item2);
+        
+        Siswa siswa1 = new Siswa(1,"Puspa");
+        Siswa siswa2 = new Siswa(2,"Adi");
+        GenerikNode<Siswa> nodeSiswa1 = new GenerikNode<Siswa>(siswa1);
+        GenerikNode<Siswa> nodeSiswa2 = new GenerikNode<Siswa>(siswa2);
+        
+        GenerikList<MyItem> testItem = new GenerikList<MyItem>();
+        assertEquals(true,testItem.isEmpty());
+        
+        GenerikList<Siswa> testSiswa = new GenerikList<Siswa>();
+        assertEquals(true,testSiswa.isEmpty());
+        
+    }
+    
+    @Test
+    public void test2(){
+        MyItem item1 = new MyItem("A",4);
+        MyItem item2 = new MyItem("B",3);
+        
+        Siswa siswa1 = new Siswa(1,"Puspa");
+        Siswa siswa2 = new Siswa(2,"Adi");
+        
+        GenerikList<MyItem> testItem = new GenerikList<MyItem>();
+        testItem.addFirst(item1);
+        assertEquals(false,testItem.isEmpty());
+        
+        GenerikList<Siswa> testSiswa = new GenerikList<Siswa>();
+        testSiswa.addFirst(siswa1);
+        assertEquals(false,testSiswa.isEmpty());
+        
+    }
+    
+    @Test
+    public void test3(){
+        MyItem item1 = new MyItem("A",4);
+        MyItem item2 = new MyItem("B",3);
+        
+        Siswa siswa1 = new Siswa(1,"Puspa");
+        Siswa siswa2 = new Siswa(2,"Adi");
+        
+        GenerikList<MyItem> testItem = new GenerikList<MyItem>();
+        testItem.addLast(item1);
+        assertEquals(false,testItem.isEmpty());
+        
+        GenerikList<Siswa> testSiswa = new GenerikList<Siswa>();
+        testSiswa.addLast(siswa1);
+        assertEquals(false,testSiswa.isEmpty());
+    }
+    
+    @Test
+    public void test4(){
+        MyItem item1 = new MyItem("A",4);
+        MyItem item2 = new MyItem("B",3);
+        MyItem item3 = new MyItem("B",3);
+        
+        Siswa siswa1 = new Siswa(1,"Puspa");
+        Siswa siswa2 = new Siswa(2,"Adi");
+        
+        GenerikList<MyItem> testItem = new GenerikList<MyItem>();
+        testItem.addFirst(item1);
+        testItem.addFirst(item2);
+        testItem.addFirst(item3);
+        assertEquals(false,testItem.isEmpty());
+        MyItem result1 = testItem.deleteFirst();
+        assertEquals("A",result1.getItem());
+        
+        GenerikList<Siswa> testSiswa = new GenerikList<Siswa>();
+        testSiswa.addLast(siswa1);
+        testSiswa.addLast(siswa2);
+        assertEquals(false,testSiswa.isEmpty());
+        Siswa resultSiswa = testSiswa.deleteLast();
+        assertEquals("Adi",resultSiswa.getNama());
+    }
+
+        @Test
+    public void test5(){
+        MyItem item1 = new MyItem("A",4);
+        MyItem item2 = new MyItem("B",3);
+        MyItem item3 = new MyItem("B",3);
+        
+        Siswa siswa1 = new Siswa(1,"Puspa");
+        Siswa siswa2 = new Siswa(2,"Adi");
+        
+        GenerikList<MyItem> testItem = new GenerikList<MyItem>();
+        testItem.addFirst(item1);
+        testItem.addFirst(item2);
+        testItem.addFirst(item3);
+        assertEquals(false,testItem.isEmpty());
+        MyItem result1 = testItem.deleteFirst();
+        assertEquals("B",result1.getItem());
+                
+        GenerikList<Siswa> testSiswa = new GenerikList<Siswa>();
+        testSiswa.addLast(siswa1);
+        testSiswa.addLast(siswa2);
+        assertEquals(false,testSiswa.isEmpty());
+        Siswa resultSiswa = testSiswa.deleteLast();
+        assertEquals("Adi",resultSiswa.getNama());
+    }
+
+}
