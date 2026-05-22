@@ -106,7 +106,7 @@ public class GenericListTest {
     }
 
         @Test
-    public void test4(){
+    public void test5(){
         MyItem item1 = new MyItem("A",4);
         MyItem item2 = new MyItem("B",3);
         MyItem item3 = new MyItem("B",3);
