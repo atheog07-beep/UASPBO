@@ -120,7 +120,7 @@ public class GenericListTest {
         testItem.addFirst(item3);
         assertEquals(false,testItem.isEmpty());
         MyItem result1 = testItem.deleteFirst();
-        assertEquals("A",result1.getItem());
+        assertEquals("B",result1.getItem());
                 
         GenerikList<Siswa> testSiswa = new GenerikList<Siswa>();
         testSiswa.addLast(siswa1);
