@@ -64,4 +64,9 @@ public class GenerikList<T> {
             this.first = tmp;
         }
     }
+    
+    public void addLast(T node){
+        GenerikNode<T> tmp = new GenerikNode<T>(node); 
+        
+    }
 }

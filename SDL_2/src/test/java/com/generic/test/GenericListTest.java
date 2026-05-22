@@ -62,4 +62,22 @@ public class GenericListTest {
         assertEquals(false,testSiswa.isEmpty());
         
     }
+    
+        @Test
+    public void test3(){
+        MyItem item1 = new MyItem("A",4);
+        MyItem item2 = new MyItem("B",3);
+        
+        Siswa siswa1 = new Siswa(1,"Puspa");
+        Siswa siswa2 = new Siswa(2,"Adi");
+        
+        GenerikList<MyItem> testItem = new GenerikList<MyItem>();
+        testItem.addLast(item1);
+        assertEquals(false,testItem.isEmpty());
+        
+        GenerikList<Siswa> testSiswa = new GenerikList<Siswa>();
+        testSiswa.addLast(siswa1);
+        assertEquals(false,testSiswa.isEmpty());
+        
+    }
 }
