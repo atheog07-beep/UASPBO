@@ -54,4 +54,7 @@ public class GenerikList<T> {
             return false;
     }
     
+    public void addFirst(T node){
+        
+    }
 }
