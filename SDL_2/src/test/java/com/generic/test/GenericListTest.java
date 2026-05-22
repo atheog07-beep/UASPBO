@@ -63,7 +63,7 @@ public class GenericListTest {
         
     }
     
-        @Test
+    @Test
     public void test3(){
         MyItem item1 = new MyItem("A",4);
         MyItem item2 = new MyItem("B",3);
@@ -78,6 +78,56 @@ public class GenericListTest {
         GenerikList<Siswa> testSiswa = new GenerikList<Siswa>();
         testSiswa.addLast(siswa1);
         assertEquals(false,testSiswa.isEmpty());
-        
     }
+    
+    @Test
+    public void test4(){
+        MyItem item1 = new MyItem("A",4);
+        MyItem item2 = new MyItem("B",3);
+        MyItem item3 = new MyItem("B",3);
+        
+        Siswa siswa1 = new Siswa(1,"Puspa");
+        Siswa siswa2 = new Siswa(2,"Adi");
+        
+        GenerikList<MyItem> testItem = new GenerikList<MyItem>();
+        testItem.addFirst(item1);
+        testItem.addFirst(item2);
+        testItem.addFirst(item3);
+        assertEquals(false,testItem.isEmpty());
+        MyItem result1 = testItem.deleteFirst();
+        assertEquals("A",result1.getItem());
+        
+        GenerikList<Siswa> testSiswa = new GenerikList<Siswa>();
+        testSiswa.addLast(siswa1);
+        testSiswa.addLast(siswa2);
+        assertEquals(false,testSiswa.isEmpty());
+        Siswa resultSiswa = testSiswa.deleteLast();
+        assertEquals("Adi",resultSiswa.getNama());
+    }
+
+        @Test
+    public void test4(){
+        MyItem item1 = new MyItem("A",4);
+        MyItem item2 = new MyItem("B",3);
+        MyItem item3 = new MyItem("B",3);
+        
+        Siswa siswa1 = new Siswa(1,"Puspa");
+        Siswa siswa2 = new Siswa(2,"Adi");
+        
+        GenerikList<MyItem> testItem = new GenerikList<MyItem>();
+        testItem.addFirst(item1);
+        testItem.addFirst(item2);
+        testItem.addFirst(item3);
+        assertEquals(false,testItem.isEmpty());
+        MyItem result1 = testItem.deleteFirst();
+        assertEquals("A",result1.getItem());
+                
+        GenerikList<Siswa> testSiswa = new GenerikList<Siswa>();
+        testSiswa.addLast(siswa1);
+        testSiswa.addLast(siswa2);
+        assertEquals(false,testSiswa.isEmpty());
+        Siswa resultSiswa = testSiswa.deleteLast();
+        assertEquals("Adi",resultSiswa.getNama());
+    }
+
 }

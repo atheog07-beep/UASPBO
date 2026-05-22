@@ -69,4 +69,13 @@ public class GenerikList<T> {
         GenerikNode<T> tmp = new GenerikNode<T>(node); 
         
     }
+    
+    public T deleteFirst(){
+        return null;
+    }
+    
+    public T deleteLast(){
+        return null;
+    }
+    
 }
