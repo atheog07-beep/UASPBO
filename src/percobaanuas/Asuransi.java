@@ -6,7 +6,7 @@ public class Asuransi implements Pembayaran {
     
     private String NomorAsuransi;
     private String JenisAsuransi;
-    private final double PersentaseCover = 100;
+    private final double PERSENTASE_COVER = 100;
     private Tagihan tagihan;
 
     public Asuransi(String NomorAsuransi, String JenisAsuransi, Tagihan tagihan) {
@@ -23,8 +23,8 @@ public class Asuransi implements Pembayaran {
         return JenisAsuransi;
     }
 
-    public double getPersentaseCover() {
-        return PersentaseCover;
+    public double getPERSENTASE_COVER() {
+        return PERSENTASE_COVER;
     }
 
     public Tagihan getTagihan() {
