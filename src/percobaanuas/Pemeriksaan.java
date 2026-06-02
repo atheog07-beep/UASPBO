@@ -15,6 +15,10 @@ public class Pemeriksaan {
     private Resep Resep;
     private String Tensi;
     private double SuhuTubuh;
+    private double TinggiBadan;
+    private double BeratBadan;
+
+
     private int NomorAntrian;
 
     public Pemeriksaan(String IDPeriksa, String TanggalPeriksa, Pasien pasien, Dokter dokter, String Keluhan, String Diagnosa, Resep Resep, String Tensi, double SuhuTubuh, int NomorAntrian) {
@@ -77,5 +81,12 @@ public class Pemeriksaan {
     public void CetakData(){
     }
     
+    public double getTinggiBadan() {
+        return TinggiBadan;
+    }
+
+    public double getBeratBadan() {
+        return BeratBadan;
+    }
     
 }

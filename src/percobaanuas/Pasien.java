@@ -6,30 +6,40 @@ package percobaanuas;
  */
 public class Pasien {
     
-    private MedicalReport NMR;
-    private double TinggiBadan;
-    private double BeratBadan;
+    private MedicalRecord NMR;
+    private String nama;
+    private int umur;
+    private String alamat;
+    private int jenisKelamin;
 
-    public Pasien(MedicalReport NMR, double TinggiBadan, double BeratBadan) {
+    public Pasien(MedicalRecord NMR, String nama, int umur, String alamat, int jenisKelamin) {
         this.NMR = NMR;
-        this.TinggiBadan = TinggiBadan;
-        this.BeratBadan = BeratBadan;
+        this.nama = nama;
+        this.umur = umur;
+        this.alamat = alamat;
+        this.jenisKelamin = jenisKelamin;
     }
 
-    public MedicalReport getNMR() {
+    public MedicalRecord getNMR() {
         return NMR;
     }
 
-    public double getTinggiBadan() {
-        return TinggiBadan;
+    public String getNama() {
+        return nama;
     }
 
-    public double getBeratBadan() {
-        return BeratBadan;
+    public int getUmur() {
+        return umur;
     }
-    
-    public int getUmur(){
-        return 0;
+
+    public String getAlamat() {
+        return alamat;
     }
+
+    public int getJenisKelamin() {
+        return jenisKelamin;
+    }
+
+   
 
 }
