@@ -10,12 +10,14 @@ public class Tagihan {
     private double JasaDokter;
     private double JasaAdministrasi;
     private double TotalTagihan;
+    private double biayaResep;
 
-    public Tagihan(String IDTagihan, double JasaDokter, double JasaAdministrasi, double TotalTagihan) {
+    public Tagihan(String IDTagihan, double JasaDokter, double JasaAdministrasi, double TotalTagihan, double biayaResep) {
         this.IDTagihan = IDTagihan;
         this.JasaDokter = JasaDokter;
         this.JasaAdministrasi = JasaAdministrasi;
         this.TotalTagihan = TotalTagihan;
+        this.biayaResep = biayaResep;
     }
 
     public String getIDTagihan() {
@@ -33,11 +35,10 @@ public class Tagihan {
     public double getTotalTagihan() {
         return TotalTagihan;
     }
-    
-    public double HitungTotalTagihan(){
-        return 0;
+
+    public double getBiayaResep() {
+        return biayaResep;
     }
+
     
-    public void cetakTagihan(){
-    }
 }

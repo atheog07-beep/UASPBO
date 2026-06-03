@@ -33,8 +33,9 @@ public class Cash implements Pembayaran {
         return SudahdiBayar;
     }
 
-    public Tagihan getTagihan() {
-        return tagihan;
+    @Override
+    public void getTagihan() {
+        
     }
    
     
@@ -53,6 +54,11 @@ public class Cash implements Pembayaran {
     @Override
     public double Total() {
         return 0;
+    }
+
+    @Override
+    public void setTagihan() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 }
 

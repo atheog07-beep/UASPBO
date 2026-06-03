@@ -8,7 +8,7 @@ package percobaanuas;
  *
  * @author ath07
  */
-public class PercobaanUAS {
+public class PuskesmasMain {
 
     /**
      * @param args the command line arguments

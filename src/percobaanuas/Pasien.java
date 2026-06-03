@@ -8,14 +8,14 @@ public class Pasien {
     
     private MedicalRecord NMR;
     private String nama;
-    private int umur;
+    private int tahunLahir;
     private String alamat;
     private int jenisKelamin;
 
-    public Pasien(MedicalRecord NMR, String nama, int umur, String alamat, int jenisKelamin) {
+    public Pasien(MedicalRecord NMR, String nama, int tahunLahir, String alamat, int jenisKelamin) {
         this.NMR = NMR;
         this.nama = nama;
-        this.umur = umur;
+        this.tahunLahir = tahunLahir;
         this.alamat = alamat;
         this.jenisKelamin = jenisKelamin;
     }
@@ -29,7 +29,7 @@ public class Pasien {
     }
 
     public int getUmur() {
-        return umur;
+        return 2026 - tahunLahir;
     }
 
     public String getAlamat() {

@@ -12,12 +12,12 @@ public class DokterUmum extends Dokter {
     
     private String Poliklinik;
     private final int JUMLAH_MAX_PASIEN = 80;
-    private int Antrian;
+    
 
-    public DokterUmum(String Poliklinik, int Antrian, String NIP, String Nama, String Jadwal, double TarifKonsultasi) {
+    public DokterUmum(String Poliklinik, String NIP, String Nama, String Jadwal, double TarifKonsultasi) {
         super(NIP, Nama, Jadwal, TarifKonsultasi);
         this.Poliklinik = Poliklinik;
-        this.Antrian = Antrian;
+        
     }
 
     public String getPoliklinik() {
@@ -28,9 +28,7 @@ public class DokterUmum extends Dokter {
         return JUMLAH_MAX_PASIEN;
     }
 
-    public int getAntrian() {
-        return Antrian;
-    }
+   
 
     public double getTarifKonsultasi() {
         return TarifKonsultasi;

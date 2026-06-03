@@ -10,29 +10,24 @@ package percobaanuas;
  */
 public class DokterSpesialis extends Dokter {
     
-    private String Spesialisasi;
+    private String spesialisasi;
 
     public DokterSpesialis(String Spesialisasi, String NIP, String Nama, String Jadwal, double TarifKonsultasi) {
         super(NIP, Nama, Jadwal, TarifKonsultasi);
-        this.Spesialisasi = Spesialisasi;
+        this.spesialisasi = Spesialisasi;
     }
 
     public String getSpesialisasi() {
-        return Spesialisasi;
-    }
-
-    public void setSpesialisasi(String Spesialisasi) {
-        this.Spesialisasi = Spesialisasi;
+        return spesialisasi;
     }
 
     public double getTarifKonsultasi() {
         return TarifKonsultasi;
     }
 
-    public void setTarifKonsultasi(double TarifKonsultasi) {
-        this.TarifKonsultasi = TarifKonsultasi;
+    public String Diagnosa(String keluhan){
+        return "";
     }
-    
     
     
     @Override

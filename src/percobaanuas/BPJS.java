@@ -30,9 +30,10 @@ public class BPJS implements Pembayaran{
     public double getTotalBayar() {
         return totalBayar;
     }
-
-    public Tagihan getTagihan() {
-        return tagihan;
+    
+    @Override
+    public void getTagihan() {
+        
     }
     
     @Override
@@ -52,5 +53,10 @@ public class BPJS implements Pembayaran{
         
         return 0;
         
+    }
+
+    @Override
+    public void setTagihan() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 }
