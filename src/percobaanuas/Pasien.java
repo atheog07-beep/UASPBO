@@ -6,13 +6,13 @@ package percobaanuas;
  */
 public class Pasien {
     
-    private MedicalRecord NMR;
+    private String NMR;
     private String nama;
     private int tahunLahir;
     private String alamat;
     private int jenisKelamin;
 
-    public Pasien(MedicalRecord NMR, String nama, int tahunLahir, String alamat, int jenisKelamin) {
+    public Pasien(String NMR, String nama, int tahunLahir, String alamat, int jenisKelamin) {
         this.NMR = NMR;
         this.nama = nama;
         this.tahunLahir = tahunLahir;
@@ -20,7 +20,7 @@ public class Pasien {
         this.jenisKelamin = jenisKelamin;
     }
 
-    public MedicalRecord getNMR() {
+    public String getNMR() {
         return NMR;
     }
 

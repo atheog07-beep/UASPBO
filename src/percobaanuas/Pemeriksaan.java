@@ -32,7 +32,10 @@ public class Pemeriksaan {
         this.NomorAntrian = NomorAntrian;
     }
 
-    
+    public void prosesPeriksa() {
+        dokter.Periksa(pasien);
+        Diagnosa = dokter.Diagnosa(Keluhan);
+    }
 
     public String getIDPeriksa() {
         return IDPeriksa;

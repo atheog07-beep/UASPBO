@@ -24,7 +24,7 @@ public class DokterSpesialis extends Dokter {
     public double getTarifKonsultasi() {
         return TarifKonsultasi;
     }
-
+    @Override
     public String Diagnosa(String keluhan){
         return "";
     }

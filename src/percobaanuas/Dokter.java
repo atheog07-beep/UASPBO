@@ -57,7 +57,7 @@ public abstract class Dokter {
         return "";
     }
     
-    
+    public abstract String Diagnosa(String keluhan) ;
     
     
 }

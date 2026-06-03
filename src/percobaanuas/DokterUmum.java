@@ -35,9 +35,10 @@ public class DokterUmum extends Dokter {
     }
     @Override
     public void Periksa(Pasien pasien) {
+        //jika flu maka 
     }
     
-    public String Diagnosa(){
+    public String Diagnosa(String keluhan){
         return "";
     }
     
