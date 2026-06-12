@@ -27,6 +27,9 @@ private double HargaResep;
             jumlahObat++;
         }
     }
+    public void isiResep(String keluhan) {
+        obat(keluhan);
+    }
     
     public void obat(String keluhan) {
         if (keluhan.equalsIgnoreCase("flu")) {
@@ -62,17 +65,26 @@ private double HargaResep;
     }
     
     public void cetakResep() {
-        
+        System.out.println("---------- RESEP ----------");
+        System.out.println("ID Resep : " + IDResep);
+        System.out.println("Pasien   : " + pasien.getNama());
+        System.out.println("Obat     :");
+        for (int i = 0; i < jumlahObat; i++) {
+            System.out.println("  " + (i+1) + ". " + daftarObat[i].getNamaObat()
+                + " (" + daftarObat[i].getMerkObat() + ") - " + Dosis[i]
+                + " | Rp " + String.format("%,.0f", daftarObat[i].getHargaObat()));
+        }
+        System.out.printf("Total Resep: Rp %,.0f%n", hitungHargaResep());
+        System.out.println("---------------------------");
+        }
+    
+    public double hitungHargaResep() {
+        HargaResep = 0;
+        for (int i = 0; i < jumlahObat; i++) {
+            HargaResep += daftarObat[i].getHargaObat();
+        }
+        return HargaResep;
     }
-    
-    
-    
-    
-    
-    /**
-     * Getter 
-     * @return 
-     */
 
     public String getIDResep() {
         return IDResep;
@@ -109,7 +121,9 @@ private double HargaResep;
         return 0;
     }
     
-    public void CetakResep(){
-    }
-    
+
 }
+    
+    
+    
+

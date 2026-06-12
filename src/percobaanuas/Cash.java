@@ -37,9 +37,6 @@ public class Cash implements Pembayaran {
     public void getTagihan() {
         
     }
-   
-    
-    // ---------- Method ----------
 
     @Override
     public void Bayar() {
@@ -56,9 +53,6 @@ public class Cash implements Pembayaran {
         return 0;
     }
 
-    @Override
-    public void setTagihan() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
+
 }
 

@@ -6,5 +6,5 @@ public interface Pembayaran {
     public String Cetak();
     public double Total();
     public void getTagihan();
-    public void setTagihan();
+    public void setTagihan(Tagihan tagihan);
 }

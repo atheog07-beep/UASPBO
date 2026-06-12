@@ -50,10 +50,7 @@ public class Asuransi implements Pembayaran {
         return 0;
     }
 
-    @Override
-    public void setTagihan() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
+   
 }
     
 
