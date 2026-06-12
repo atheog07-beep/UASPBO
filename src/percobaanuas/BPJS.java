@@ -30,33 +30,40 @@ public class BPJS implements Pembayaran{
     public double getTotalBayar() {
         return totalBayar;
     }
-    
+
     @Override
-    public void getTagihan() {
+    public void Bayar() {
+        double Tanggungan;
         
+        switch (kelasBPJS){
+            case 1 : Tanggungan = 1.0; break;
+            case 2 : Tanggungan = 0.75; break;
+            default : Tanggungan = 0.5; break;
+        }
+        double ditanggung =  (tagihan.getJasaDokter() + tagihan.getJasaAdministrasi() * Tanggungan);
+        totalBayar = tagihan.getTotalTagihan() - ditanggung;
+        System.out.println(Cetak());
     }
-    
+
     @Override
-    public void Bayar(){
-        
-      
-    }
-    @Override
-    public String Cetak(){
-        
-        return null;
-        
-    }
-    
-    @Override
-    public double Total(){
-        
-        return 0;
+    public String Cetak() {
         
     }
 
     @Override
-    public void setTagihan() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    public double Total() {
+        return totalBayar;
     }
+
+    @Override
+    public void getTagihan() {
+        tagihan.cetakTagihan();
+    }
+
+    @Override
+    public void setTagihan(Tagihan tagihan) {
+
+    }
+    
+
 }
