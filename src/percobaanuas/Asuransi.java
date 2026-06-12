@@ -44,17 +44,24 @@ public class Asuransi implements Pembayaran {
 
     @Override
     public String Cetak() {
-        return String.format("========Pembayaran========" + 
-                "Nomor Asuransi   : " + 
-                "Jenis Asuransi   : " + 
-                "Persentase Cover : " + 
-                "total bayar      : ");
-        
+        return String.format(
+            "===== BUKTI PEMBAYARAN ASURANSI =====%n" +
+            "No. Asuransi : %s%n" +
+            "Jenis        : %s%n" +
+            "Cover        : %.0f%%%n" +
+            "Total Bayar  : Rp %,.0f (DITANGGUNG ASURANSI)%n" +
+            "=====================================",
+            NomorAsuransi, JenisAsuransi, PERSENTASE_COVER, totalBayar);
     }
 
     @Override
     public double Total() {
         return totalBayar;
+    }
+
+    @Override
+    public void setTagihan(Tagihan tagihan) {
+      this.tagihan = tagihan;
     }
 
    

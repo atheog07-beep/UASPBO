@@ -47,7 +47,13 @@ public class BPJS implements Pembayaran{
 
     @Override
     public String Cetak() {
-        
+         return String.format(
+            "===== BUKTI PEMBAYARAN BPJS =====%n" +
+            "Nomor BPJS  : %s%n" +
+            "Kelas       : %s%n" +
+            "Total Bayar : Rp %,.0f%n" +
+            "================================",
+            nomorBPJS, namaKelas, totalBayar);
     }
 
     @Override
@@ -62,7 +68,7 @@ public class BPJS implements Pembayaran{
 
     @Override
     public void setTagihan(Tagihan tagihan) {
-
+        this.tagihan = tagihan;
     }
     
 

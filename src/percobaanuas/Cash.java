@@ -52,12 +52,26 @@ public class Cash implements Pembayaran {
 
     @Override
     public String Cetak() {
-        return "Pembayaran Cash";
+        return String.format(
+            "===== BUKTI PEMBAYARAN CASH =====%n" +
+            "Metode      : Tunai%n" +
+            "Total Bayar : Rp %,.0f%n" +
+            "Uang Masuk  : Rp %,.0f%n" +
+            "Kembalian   : Rp %,.0f%n" +
+            "Status      : %s%n" +
+            "================================",
+            TotalBayar, UangdiBayar, Kembalian,
+            SudahdiBayar ? "LUNAS" : "BELUM LUNAS");
     }
 
     @Override
     public double Total() {
         return TotalBayar;
+    }
+
+    @Override
+    public void setTagihan(Tagihan tagihan) {
+        this.tagihan = tagihan;
     }
 
 
