@@ -26,13 +26,20 @@ public class DokterSpesialis extends Dokter {
     }
     @Override
     public String Diagnosa(String keluhan){
-        return "";
+        if(keluhan == "Sakit Gigi"){
+            System.out.println("menjaga kebersihan gigi");
+        }else if(keluhan == "Hipertensi"){
+            System.out.println("perbanyak makan sayur dan buah");
+        }
+        return "tidak valid";
     }
     
     
     @Override
     public void Periksa(Pasien pasien) {
-       
+        System.out.println("Nama         : " + getNama());
+        System.out.println("NIP          : " + getNIP());
+        System.out.println("Spesialisasi : " + getSpesialisasi());
     }
     
     @Override

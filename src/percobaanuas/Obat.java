@@ -40,6 +40,11 @@ public class Obat {
     }
      
     private void KurangStock(int jumlah){
+        if (StockObat >= jumlah) {
+            StockObat -= jumlah;
+         } else {
+            System.out.println("Stok obat tidak mencukupi.");
+        }
         
     }
 

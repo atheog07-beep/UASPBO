@@ -4,6 +4,7 @@ public class Asuransi implements Pembayaran {
 
     // ---------- Atribut ----------
     
+    private double totalBayar;
     private String NomorAsuransi;
     private String JenisAsuransi;
     private final double PERSENTASE_COVER = 100;
@@ -29,7 +30,7 @@ public class Asuransi implements Pembayaran {
     
     @Override
     public void getTagihan() {
-        
+        tagihan.cetakTagihan();
     }
     
    
@@ -37,17 +38,23 @@ public class Asuransi implements Pembayaran {
     
     @Override
     public void Bayar() {
-
+      totalBayar = 0;
+        System.out.println(Cetak());
     }
 
     @Override
     public String Cetak() {
-        return "Pembayaran Asuransi";
+        return String.format("========Pembayaran========" + 
+                "Nomor Asuransi   : " + 
+                "Jenis Asuransi   : " + 
+                "Persentase Cover : " + 
+                "total bayar      : ");
+        
     }
 
     @Override
     public double Total() {
-        return 0;
+        return totalBayar;
     }
 
    

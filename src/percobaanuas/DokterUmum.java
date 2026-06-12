@@ -35,11 +35,24 @@ public class DokterUmum extends Dokter {
     }
     @Override
     public void Periksa(Pasien pasien) {
-        //jika flu maka 
+        System.out.println("Nama : " + getNama());
+        System.out.println("NIP  : " + getNIP());
+        System.out.println("Poli : " + getPoliklinik());
     }
     
     public String Diagnosa(String keluhan){
-        return "";
+        if(keluhan == "flu"){
+            System.out.println("kurangi konsumsi minum/makan yang dingin");
+        }else if(keluhan == "Maag"){
+            System.out.println("jangan telat makan, kurangi makanan pedas");
+        }else if(keluhan == "Hipertensi"){
+            System.out.println("perbanyak makan sayur dan buah");
+        }else if(keluhan == "Diare"){
+            System.out.println("perbanyak minum air putih");
+        }else if(keluhan == "Asma"){
+            System.out.println("menjauhi lingkungan yang berasap, hindari aktivitas berat");
+        }
+        return "tidak valid";
     }
     
     @Override

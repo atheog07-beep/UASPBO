@@ -40,7 +40,14 @@ public class Cash implements Pembayaran {
 
     @Override
     public void Bayar() {
-
+        TotalBayar = tagihan.getTotalTagihan();
+        if (UangdiBayar > TotalBayar) {
+        Kembalian = UangdiBayar - TotalBayar;
+        SudahdiBayar = true;
+            System.out.println(Cetak());
+    } else {
+            System.out.println("uang tidak cukup");
+        }
     }
 
     @Override
@@ -50,7 +57,7 @@ public class Cash implements Pembayaran {
 
     @Override
     public double Total() {
-        return 0;
+        return TotalBayar;
     }
 
 
