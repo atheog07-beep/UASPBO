@@ -20,6 +20,10 @@ public class Tagihan {
         this.TotalTagihan = JasaDokter + JasaAdministrasi + biayaResep;
     }
 
+    public Tagihan() {
+    }
+    
+
     public String getIDTagihan() {
         return IDTagihan;
     }

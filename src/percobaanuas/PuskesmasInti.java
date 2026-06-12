@@ -189,7 +189,7 @@ public class PuskesmasInti {
     public void cetakDaftarDokter() {
         System.out.println("========== DAFTAR DOKTER PUSKESMAS ==========");
         for (int i = 0; i < daftarDokter.length; i++) {
-            if (daftarDokter[i] != null) System.out.println((i+1) + ". " + daftarDokter[i].getInfo());
+            if (daftarDokter[i] != null) System.out.println((i+1) + ". " + daftarDokter[i].getNama());
         }
         System.out.println("=============================================");
     }
