@@ -25,6 +25,7 @@ private double HargaResep;
             daftarObat[jumlahObat] = obat;
             this.Dosis[jumlahObat] = dosis;
             jumlahObat++;
+            obat.KurangStock(1);
         }
     }
     public void isiResep(String keluhan) {
@@ -114,16 +115,7 @@ private double HargaResep;
         return HargaResep;
     }
 
-    public void TambahObat(){  
-    }
-    
-    public double HitungHargaResep(){
-        return 0;
-    }
-    
-
 }
     
     
     
-

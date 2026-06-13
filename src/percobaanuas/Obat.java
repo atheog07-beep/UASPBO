@@ -39,7 +39,7 @@ public class Obat {
         return isKlaimBPJS;
     }
      
-    private void KurangStock(int jumlah){
+    public void KurangStock(int jumlah){
         if (StockObat >= jumlah) {
             StockObat -= jumlah;
          } else {
@@ -48,7 +48,4 @@ public class Obat {
         
     }
 
-    public void cetakDataObat(){
-    
-    }
 }

@@ -54,7 +54,8 @@ public abstract class Dokter {
     public abstract void Periksa(Pasien pasien);
     
     public String getInfo(){
-        return "";
+         return "NIP: " + NIP + " | Nama: " + Nama + " | Jadwal: " + Jadwal
+               + " | Tarif: Rp " + String.format("%,.0f", TarifKonsultasi);
     }
     
     public abstract String Diagnosa(String keluhan) ;

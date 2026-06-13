@@ -100,7 +100,7 @@ public class PuskesmasInti {
         this.bayarAktif = bayarAktif;
     }
     
-
+    
     public void inisialisasiDokter() {
         daftarDokter[0] = new DokterUmum("Poli Umum",  "255314130", "Fani",    "Sen-Jum 07:00-14:00",   100000);
         daftarDokter[1] = new DokterUmum("Poli Anak",  "255314115", "Angel",   "Sen-Jum 07:00-14:00",   120000);
@@ -114,7 +114,7 @@ public class PuskesmasInti {
         Pasien pasien = new Pasien(nmr, nama, tahunLahir, alamat, jenisKelamin);
         return daftarPasien(pasien);
     }
-
+    //helper daftarPasienBaru, buat MR
     public MedicalRecord daftarPasien(Pasien pasien) {
         MedicalRecord mr = new MedicalRecord(pasien);
         dataMR[jumlahMR] = mr;
@@ -177,12 +177,19 @@ public class PuskesmasInti {
     }
 
     public DokterUmum getDokterUmum() {
-        for (Dokter d : daftarDokter) if (d instanceof DokterUmum) return (DokterUmum) d;
+        for (int i = 0; i < daftarDokter.length; i++) {
+            Dokter d = daftarDokter[i];      
+            if (d instanceof DokterUmum) 
+                return (DokterUmum) d;
+        }
         return null;
     }
 
     public DokterSpesialis getDokterSpesialis() {
-        for (Dokter d : daftarDokter) if (d instanceof DokterSpesialis) return (DokterSpesialis) d;
+         for (int i = 0; i < daftarDokter.length; i++) {
+            Dokter d = daftarDokter[i]; 
+                return (DokterSpesialis) d;
+         }
         return null;
     }
 

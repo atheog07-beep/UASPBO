@@ -26,9 +26,9 @@ public class DokterSpesialis extends Dokter {
     }
     @Override
     public String Diagnosa(String keluhan){
-        if(keluhan == "Sakit Gigi"){
+        if(keluhan.equalsIgnoreCase("Sakit Gigi")){
             System.out.println("menjaga kebersihan gigi");
-        }else if(keluhan == "Hipertensi"){
+        }else if(keluhan.equals("Hipertensi")){
             System.out.println("perbanyak makan sayur dan buah");
         }
         return "tidak valid";
@@ -37,14 +37,12 @@ public class DokterSpesialis extends Dokter {
     
     @Override
     public void Periksa(Pasien pasien) {
-        System.out.println("Nama         : " + getNama());
-        System.out.println("NIP          : " + getNIP());
-        System.out.println("Spesialisasi : " + getSpesialisasi());
+        System.out.println("Dr. Sp. " + getNama() + " (" + spesialisasi + ") memeriksa: " + pasien.getNama());
     }
     
     @Override
      public String getInfo(){
-        return "";
+         return "[Spesialis " + spesialisasi + "] " + super.getInfo();
     }
     
      

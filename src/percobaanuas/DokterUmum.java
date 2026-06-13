@@ -35,21 +35,19 @@ public class DokterUmum extends Dokter {
     }
     @Override
     public void Periksa(Pasien pasien) {
-        System.out.println("Nama : " + getNama());
-        System.out.println("NIP  : " + getNIP());
-        System.out.println("Poli : " + getPoliklinik());
+        System.out.println("Dr. " + getNama() + " sedang memeriksa pasien: " + pasien.getNama());
     }
     
     public String Diagnosa(String keluhan){
-        if(keluhan == "flu"){
+        if(keluhan.equalsIgnoreCase("Flu")){
             System.out.println("kurangi konsumsi minum/makan yang dingin");
-        }else if(keluhan == "Maag"){
+        }else if(keluhan.equalsIgnoreCase("Maag")){
             System.out.println("jangan telat makan, kurangi makanan pedas");
-        }else if(keluhan == "Hipertensi"){
+        }else if(keluhan.equalsIgnoreCase("Hipertensi")){
             System.out.println("perbanyak makan sayur dan buah");
-        }else if(keluhan == "Diare"){
+        }else if(keluhan.equalsIgnoreCase("Diare")){
             System.out.println("perbanyak minum air putih");
-        }else if(keluhan == "Asma"){
+        }else if(keluhan.equalsIgnoreCase("Asma")){
             System.out.println("menjauhi lingkungan yang berasap, hindari aktivitas berat");
         }
         return "tidak valid";
@@ -57,7 +55,7 @@ public class DokterUmum extends Dokter {
     
     @Override
      public String getInfo(){
-        return "";
+        return "[Dokter Umum] " + super.getInfo() + " | Poli: " + Poliklinik;
     }
     
     
