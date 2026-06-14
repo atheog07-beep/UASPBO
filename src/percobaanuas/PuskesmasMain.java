@@ -1,11 +1,11 @@
-package percobaanuas;
+package percobaanuas; // Menentukan package tempat class berada
 
-import java.util.Scanner;
+import java.util.Scanner; // Mengimpor class Scanner untuk input keyboard
 
 /**
  * @author ath07 (revised + bugfix + antrian + menu obat)
  */
-public class PuskesmasMain {
+public class PuskesmasMain { // Class utama program
 
     // Array seluruh medical record pasien yang terdaftar
     private static MedicalRecord[] daftarMR = new MedicalRecord[100];
@@ -14,8 +14,10 @@ public class PuskesmasMain {
     public static void main(String[] args) {
         //buat objek scanner dan puskesmas
         Scanner fani = new Scanner(System.in);
+
+        // Membuat objek puskesmas
         PuskesmasInti puskesmas = new PuskesmasInti();
-        puskesmas.inisialisasiDokter();//inisialisi dokter puskesmas 
+        puskesmas.inisialisasiDokter();//inisialisasi dokter puskesmas 
         
         //header puskesmas
         System.out.println("==========================================");
@@ -53,7 +55,8 @@ public class PuskesmasMain {
                     System.out.println("  TERIMA KASIH TELAH BERKUNJUNG");
                     System.out.println("  SEMOGA LEKAS SEHAT :)");
                     System.out.println("==========================================");
-                    jalan = false;
+
+                    jalan = false; // Menghentikan loop program
                     break;
                 default:
                     System.out.println("Pilihan tidak valid. Masukkan angka 1 - 7!!\n");//jika input user tidak valid
@@ -66,6 +69,7 @@ public class PuskesmasMain {
      * tampilan menu utama program
      */
     private static void tampilkanMenuUtama() {
+
         System.out.println("\n==========================================");
         System.out.println("              MENU UTAMA                 ");
         System.out.println("==========================================");
@@ -107,7 +111,6 @@ public class PuskesmasMain {
         } else {
             System.out.println("Pilihan tidak valid!");//jika inputan user tidak valid
             return;
-        }
 
         //masukkan ke antrian
         int noAntrian = puskesmas.masukAntrian(mr);
@@ -261,17 +264,23 @@ public class PuskesmasMain {
         System.out.print("Keluhan      : ");
         String keluhan = fani.nextLine();
 
-        System.out.print("Tensi        : ");
-        String tensi = fani.nextLine();
+    // Menampilkan menu pemilihan dokter
+    System.out.println("\n=== PILIH DOKTER ===");
 
-        System.out.print("Suhu Tubuh   : ");
-        double suhu = fani.nextDouble();
+    // Menampilkan daftar dokter yang tersedia
+    puskesmas.cetakDaftarDokter();
 
-        System.out.print("Berat Badan  : ");
-        double beratBadan = fani.nextDouble();
+    // Variabel untuk menyimpan pilihan dokter
+    int pilihanDokter = 0;
 
-        System.out.print("Tinggi Badan : ");
-        double tinggiBadan = fani.nextDouble();
+    // Validasi agar pilihan dokter hanya 1 sampai 5
+    while (pilihanDokter < 1 || pilihanDokter > 5) {
+
+        // Meminta nomor dokter
+        System.out.print("Pilih nomor dokter (1-5) : ");
+
+        // Membaca input dokter
+        pilihanDokter = fani.nextInt();
         fani.nextLine();
 
         //roses pemeriksaan

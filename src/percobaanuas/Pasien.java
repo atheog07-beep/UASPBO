@@ -1,24 +1,24 @@
-package percobaanuas;
+package percobaanuas; // Menentukan package tempat class Pasien berada
 
 /**
  *
  * @author ath07
  */
-public class Pasien {
-    //attribut pasien
-    private String NMR;
-    private String nama;
-    private int tahunLahir;
-    private String alamat;
-    private int jenisKelamin;
+public class Pasien { // Deklarasi class Pasien
     
-    //consdtructor berparameter
+    private String NMR; // Menyimpan Nomor Rekam Medis pasien
+    private String nama; // Menyimpan nama pasien
+    private int tahunLahir; // Menyimpan tahun lahir pasien
+    private String alamat; // Menyimpan alamat pasien
+    private int jenisKelamin; // Menyimpan jenis kelamin pasien (misal: 1=Laki-laki, 2=Perempuan)
+
+    // Constructor untuk menginisialisasi data pasien saat objek dibuat
     public Pasien(String NMR, String nama, int tahunLahir, String alamat, int jenisKelamin) {
-        this.NMR = NMR;
-        this.nama = nama;
-        this.tahunLahir = tahunLahir;
-        this.alamat = alamat;
-        this.jenisKelamin = jenisKelamin;
+        this.NMR = NMR; // Mengisi atribut NMR dengan parameter NMR
+        this.nama = nama; // Mengisi atribut nama dengan parameter nama
+        this.tahunLahir = tahunLahir; // Mengisi atribut tahunLahir dengan parameter tahunLahir
+        this.alamat = alamat; // Mengisi atribut alamat dengan parameter alamat
+        this.jenisKelamin = jenisKelamin; // Mengisi atribut jenisKelamin dengan parameter jenisKelamin
     }
     
     //getters
