@@ -1,7 +1,7 @@
 package percobaanuas;
 
 public class Resep {
- 
+ //attribut class
 private String IDResep;
 private Pasien pasien;
 private Pemeriksaan pemeriksaan;
@@ -9,7 +9,13 @@ private Obat[] daftarObat;
 private String[] Dosis;
 private int jumlahObat;
 private double HargaResep;
-
+    
+    /**
+     * constructor class
+     * @param IDResep
+     * @param pasien
+     * @param maxObat 
+     */
     public Resep(String IDResep, Pasien pasien, int maxObat) {
         this.IDResep = IDResep;
         this.pasien = pasien;
@@ -19,7 +25,11 @@ private double HargaResep;
         this.jumlahObat = 0;
         this.HargaResep = 0;
     }
-    
+    /**
+     * method untuk menambah obat
+     * @param obat
+     * @param dosis 
+     */
     public void tambahObat(Obat obat, String dosis) {
         if (jumlahObat < daftarObat.length) {
             daftarObat[jumlahObat] = obat;
@@ -28,10 +38,18 @@ private double HargaResep;
             obat.KurangStock(1);
         }
     }
+    /**
+     * method untuk isi resep
+     * @param keluhan 
+     */
     public void isiResep(String keluhan) {
         obat(keluhan);
     }
-    
+    /**
+     * method untuk buat resep berdasarkan keluhan
+     * buat obat dulu
+     * @param keluhan 
+     */
     public void obat(String keluhan) {
         if (keluhan.equalsIgnoreCase("flu")) {
             Obat pct = new Obat("Paracetamol",5000, "Panadol", 67, true);
@@ -64,7 +82,9 @@ private double HargaResep;
             tambahObat(pct, "3x sehari");
         }
     }
-    
+    /**
+     * method untuk mencetak resep
+     */
     public void cetakResep() {
         System.out.println("---------- RESEP ----------");
         System.out.println("ID Resep : " + IDResep);
@@ -78,7 +98,10 @@ private double HargaResep;
         System.out.printf("Total Resep: Rp %,.0f%n", hitungHargaResep());
         System.out.println("---------------------------");
         }
-    
+    /**
+     * method untuk menghitung harga resep
+     * @return 
+     */
     public double hitungHargaResep() {
         HargaResep = 0;
         for (int i = 0; i < jumlahObat; i++) {
@@ -86,34 +109,15 @@ private double HargaResep;
         }
         return HargaResep;
     }
-
-    public String getIDResep() {
-        return IDResep;
-    }
-
-    public Pasien getPasien() {
-        return pasien;
-    }
-
-    public Pemeriksaan getPemeriksaan() {
-        return pemeriksaan;
-    }
-
-    public Obat[] getDaftarObat() {
-        return daftarObat;
-    }
-
-    public String[] getDosis() {
-        return Dosis;
-    }
-
-    public int getJumlahObat() {
-        return jumlahObat;
-    }
-
-    public double getHargaResep() {
-        return HargaResep;
-    }
+    
+    //getter
+    public String getIDResep() {return IDResep;}
+    public Pasien getPasien() { return pasien;}
+    public Pemeriksaan getPemeriksaan() {return pemeriksaan; }
+    public Obat[] getDaftarObat() {return daftarObat;}
+    public String[] getDosis() {return Dosis;}
+    public int getJumlahObat() {return jumlahObat; }
+    public double getHargaResep() { return HargaResep; }
 
 }
     
