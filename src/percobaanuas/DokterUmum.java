@@ -8,44 +8,50 @@ package percobaanuas;
  *
  * @author ath07
  */
-public class DokterUmum extends Dokter {
+public class DokterUmum extends Dokter { //Kelas DokterUmum yang mewarisi kelas Dokter 
     
-    private String Poliklinik;
-    private final int JUMLAH_MAX_PASIEN = 80;
+    private String Poliklinik; // atribut Poliklinik
+    private final int JUMLAH_MAX_PASIEN = 80; //atribut konstanta jumlah maksimal pasien
     
-
+    //constructor
     public DokterUmum(String Poliklinik, String NIP, String Nama, String Jadwal, double TarifKonsultasi) {
         super(NIP, Nama, Jadwal, TarifKonsultasi);
         this.Poliklinik = Poliklinik;
         
     }
-
+    //metode getter untuk atribut poliklinik
     public String getPoliklinik() {
-        return Poliklinik;
+        return Poliklinik; //Mengembalikan nilai atribut Poliklinik
     }
-
+    //metode getter untuk atribut JUMLAH_MAX_PASIEN
     public int getJUMLAH_MAX_PASIEN() {
-        return JUMLAH_MAX_PASIEN;
+        return JUMLAH_MAX_PASIEN; //Mengembalikan nilai konstanta JUMLAH_MAX_PASIEN
     }
-
-   
-
+    //metode getter untuk atribut tarif konsultasi yang diwarisi dari kelas induk
     public double getTarifKonsultasi() {
-        return TarifKonsultasi;
+        return TarifKonsultasi; //Mengembalikan nilai tarif konsultasi
     }
-    @Override
+    
+    @Override //metode ini meng-override metode Periksa dari kelas induk
     public void Periksa(Pasien pasien) {
+         //Menampilkan nama dokter dan nama pasien yang sedang diperiksa
         System.out.println("Dr. " + getNama() + " sedang memeriksa pasien: " + pasien.getNama());
     }
     
     
     
-    @Override
+    @Override //metode ini meng-override metode Periksa dari kelas induk
      public String getInfo(){
+         //Menggabungkan label dokter umum, info dasar dari kelas induk, dan nama poliklinik
         return "[Dokter Umum] " + super.getInfo() + " | Poli: " + Poliklinik;
     }
-
-    @Override
+    /**
+     * Memberikan saran kesehatan berdasarkan keluhan pasien.
+     * Menangani 5 jenis keluhan: Flu, Maag, Hipertensi, Diare, dan Asma.
+     * @param keluhan String keluhan yang disampaikan pasien
+     * @return String saran yang sesuai dengan keluhan, atau "-" jika keluhan tidak dikenali
+     */
+    @Override//metode ini meng-override metode Periksa dari kelas induk
     public String Saran(String keluhan) {
         if(keluhan.equalsIgnoreCase("Flu")){
             return " kurangi konsumsi minum/makan yang dingin";
@@ -60,7 +66,12 @@ public class DokterUmum extends Dokter {
         }
         return "-";
     }
-
+    /**
+     * Menentukan diagnosa berdasarkan keluhan pasien.
+     * Menangani 5 jenis keluhan: Flu, Maag, Hipertensi, Diare, dan Asma.
+     * @param keluhan String keluhan yang disampaikan pasien
+     * @return String hasil diagnosa, atau "tidak valid" jika keluhan tidak dikenali
+     */
     @Override
     public String Diagnosa(String keluhan) {
         if (keluhan.equalsIgnoreCase("Flu")) 
