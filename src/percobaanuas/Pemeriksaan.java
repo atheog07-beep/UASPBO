@@ -5,7 +5,7 @@ package percobaanuas;
  * @author ath07
  */
 public class Pemeriksaan {
-    
+    //atribut pemeriksaan
     private String IDPeriksa;
     private String TanggalPeriksa;
     private Pasien pasien;
@@ -18,21 +18,9 @@ public class Pemeriksaan {
     private double BeratBadan;
     private int NomorAntrian;
     private Resep resep;
-
-    public Pemeriksaan(String IDPeriksa, String TanggalPeriksa, Pasien pasien, Dokter dokter,String Keluhan, String Diagnosa, String Tensi, double SuhuTubuh, double TinggiBadan, double BeratBadan, int NomorAntrian) {
-        this.IDPeriksa = IDPeriksa;
-        this.TanggalPeriksa = TanggalPeriksa;
-        this.pasien = pasien;
-        this.dokter = dokter;
-        this.Keluhan = Keluhan;
-        this.Diagnosa = Diagnosa;
-        this.Tensi = Tensi;
-        this.SuhuTubuh = SuhuTubuh;
-        this.TinggiBadan = TinggiBadan;
-        this.BeratBadan = BeratBadan;
-        this.NomorAntrian = NomorAntrian;
-    }
     
+   
+    //construcor pemeriksaan
     public Pemeriksaan(String IDPeriksa, String TanggalPeriksa,
                        Pasien pasien, Dokter dokter, String Keluhan, int NomorAntrian) {
         this.IDPeriksa = IDPeriksa;
@@ -154,7 +142,7 @@ public class Pemeriksaan {
         System.out.println("Keluhan     : " + Keluhan);
         System.out.println("Diagnosa    : " + Diagnosa);
         System.out.println("Tensi       : " + Tensi);
-        System.out.println("Suhu        : " + SuhuTubuh + " °C");
+        System.out.println("Suhu        : " + SuhuTubuh + " C");
         System.out.println("BB / TB     : " + BeratBadan + " kg / " + TinggiBadan + " cm");
         System.out.println("=================================");
     }
