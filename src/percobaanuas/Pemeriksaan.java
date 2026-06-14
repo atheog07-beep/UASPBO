@@ -5,157 +5,97 @@ package percobaanuas;
  * @author ath07
  */
 public class Pemeriksaan {
-    //atribut pemeriksaan
-    private String IDPeriksa;
-    private String TanggalPeriksa;
+
+    // atribut pemeriksaan
+    private String idPeriksa;
+    private String tanggalPeriksa;
     private Pasien pasien;
     private Dokter dokter;
-    private String Keluhan;
-    private String Diagnosa;
-    private String Tensi;
-    private double SuhuTubuh;
-    private double TinggiBadan;
-    private double BeratBadan;
-    private int NomorAntrian;
+    private String keluhan;
+    private String diagnosa;
+    private String tensi;
+    private double suhuTubuh;
+    private double tinggiBadan;
+    private double beratBadan;
+    private int nomorAntrian;
     private Resep resep;
-    private String Saran;
-    
-   
-    //construcor pemeriksaan
-    public Pemeriksaan(String IDPeriksa, String TanggalPeriksa,
-                       Pasien pasien, Dokter dokter, String Keluhan, int NomorAntrian) {
-        this.IDPeriksa = IDPeriksa;
-        this.TanggalPeriksa = TanggalPeriksa;
+    private String saran;
+
+    // constructor pemeriksaan
+    public Pemeriksaan(String idPeriksa, String tanggalPeriksa,
+                       Pasien pasien, Dokter dokter,
+                       String keluhan, int nomorAntrian) {
+        this.idPeriksa = idPeriksa;
+        this.tanggalPeriksa = tanggalPeriksa;
         this.pasien = pasien;
         this.dokter = dokter;
-        this.Keluhan = Keluhan;
-        this.NomorAntrian = NomorAntrian;
+        this.keluhan = keluhan;
+        this.nomorAntrian = nomorAntrian;
     }
-    public void ProsesPeriksa() {
+    /**
+     * method untuik proses periksa dari dokter
+     */
+    public void prosesPeriksa() {
         dokter.Periksa(pasien);
-        Diagnosa = dokter.Diagnosa(Keluhan);
-        Saran = dokter.Saran(Keluhan); 
+        diagnosa = dokter.Diagnosa(keluhan);
+        saran = dokter.Saran(keluhan);
     }
+    //getters dan setters
+    public String getSaran() { return saran; }
+    public void setSaran(String saran) { this.saran = saran; }
 
-    public String getSaran() {
-        return Saran;
-    }
+    public String getIdPeriksa() { return idPeriksa; }
+    public void setIdPeriksa(String idPeriksa) { this.idPeriksa = idPeriksa; }
 
-    public void setSaran(String Saran) {
-        this.Saran = Saran;
-    }
+    public String getTanggalPeriksa() { return tanggalPeriksa; }
+    public void setTanggalPeriksa(String tanggalPeriksa) { this.tanggalPeriksa = tanggalPeriksa; }
+
+    public Resep getResep() { return resep; }
+    public void setResep(Resep resep) { this.resep = resep; }
+
+    public Pasien getPasien() { return pasien; }
+    public void setPasien(Pasien pasien) { this.pasien = pasien; }
+
+    public Dokter getDokter() { return dokter; }
+    public void setDokter(Dokter dokter) { this.dokter = dokter; }
+
+    public String getKeluhan() { return keluhan; }
+    public void setKeluhan(String keluhan) { this.keluhan = keluhan; }
+
+    public String getDiagnosa() { return diagnosa; }
+    public void setDiagnosa(String diagnosa) { this.diagnosa = diagnosa; }
+
+    public String getTensi() { return tensi; }
+    public void setTensi(String tensi) { this.tensi = tensi; }
+
+    public double getSuhuTubuh() { return suhuTubuh; }
+    public void setSuhuTubuh(double suhuTubuh) { this.suhuTubuh = suhuTubuh; }
+
+    public double getTinggiBadan() { return tinggiBadan; }
+    public void setTinggiBadan(double tinggiBadan) { this.tinggiBadan = tinggiBadan; }
+
+    public double getBeratBadan() { return beratBadan; }
+    public void setBeratBadan(double beratBadan) { this.beratBadan = beratBadan; }
+
+    public int getNomorAntrian() { return nomorAntrian; }
+    public void setNomorAntrian(int nomorAntrian) { this.nomorAntrian = nomorAntrian; }
     
-    public String getIDPeriksa() {
-        return IDPeriksa;
-    }
-
-    public void setIDPeriksa(String IDPeriksa) {
-        this.IDPeriksa = IDPeriksa;
-    }
-
-    public String getTanggalPeriksa() {
-        return TanggalPeriksa;
-    }
-
-    public void setTanggalPeriksa(String TanggalPeriksa) {
-        this.TanggalPeriksa = TanggalPeriksa;
-    }
-
-    public void setResep(Resep resep) {
-        this.resep = resep;
-    }
-
-    public Resep getResep() {
-        return resep;
-    }
-    
-
-    public Pasien getPasien() {
-        return pasien;
-    }
-
-    public void setPasien(Pasien pasien) {
-        this.pasien = pasien;
-    }
-
-    public Dokter getDokter() {
-        return dokter;
-    }
-
-    public void setDokter(Dokter dokter) {
-        this.dokter = dokter;
-    }
-
-    public String getKeluhan() {
-        return Keluhan;
-    }
-
-    public void setKeluhan(String Keluhan) {
-        this.Keluhan = Keluhan;
-    }
-
-    public String getDiagnosa() {
-        return Diagnosa;
-    }
-
-    public void setDiagnosa(String Diagnosa) {
-        this.Diagnosa = Diagnosa;
-    }
-
-    public String getTensi() {
-        return Tensi;
-    }
-
-    public void setTensi(String Tensi) {
-        this.Tensi = Tensi;
-    }
-
-    public double getSuhuTubuh() {
-        return SuhuTubuh;
-    }
-
-    public void setSuhuTubuh(double SuhuTubuh) {
-        this.SuhuTubuh = SuhuTubuh;
-    }
-
-    public double getTinggiBadan() {
-        return TinggiBadan;
-    }
-
-    public void setTinggiBadan(double TinggiBadan) {
-        this.TinggiBadan = TinggiBadan;
-    }
-
-    public double getBeratBadan() {
-        return BeratBadan;
-    }
-
-    public void setBeratBadan(double BeratBadan) {
-        this.BeratBadan = BeratBadan;
-    }
-
-    public int getNomorAntrian() {
-        return NomorAntrian;
-    }
-
-    public void setNomorAntrian(int NomorAntrian) {
-        this.NomorAntrian = NomorAntrian;
-    }
-
+    /**
+     * mthod untuk cetakData
+     */
     public void CetakData() {
         System.out.println("========== PEMERIKSAAN ==========");
-        System.out.println("ID Periksa  : " + IDPeriksa);
-        System.out.println("Tanggal     : " + TanggalPeriksa);
-        System.out.println("Antrian     : " + NomorAntrian);
+        System.out.println("ID Periksa  : " + idPeriksa);
+        System.out.println("Tanggal     : " + tanggalPeriksa);
+        System.out.println("Antrian     : " + nomorAntrian);
         System.out.println("Pasien      : " + pasien.getNama());
         System.out.println("Dokter      : " + dokter.getNama());
-        System.out.println("Keluhan     : " + Keluhan);
-        System.out.println("Diagnosa    : " + Diagnosa);
-        System.out.println("Saran       :" + Saran);
-        System.out.println("Tensi       : " + Tensi);
-        System.out.println("Suhu        : " + SuhuTubuh + " C");
-        System.out.println("BB / TB     : " + BeratBadan + " kg / " + TinggiBadan + " cm");
+        System.out.println("Keluhan     : " + keluhan);
+        System.out.println("Diagnosa    : " + diagnosa);
+        System.out.println("Saran       : " + saran);
+        System.out.println("Tensi       : " + tensi);
+        System.out.println("Suhu        : " + suhuTubuh + " C");
+        System.out.println("BB / TB     : " + beratBadan + " kg / " + tinggiBadan + " cm");
         System.out.println("=================================");
     }
-    
 }
