@@ -196,7 +196,7 @@ public class PuskesmasInti {
         periksa.setSuhuTubuh(suhu);
         periksa.setBeratBadan(bb);
         periksa.setTinggiBadan(tb);
-        periksa.ProsesPeriksa();
+        periksa.prosesPeriksa();
 
         resepCounter++;
         Resep resep = new Resep("RSP-" + String.format("%03d", resepCounter), mr.getData(), 5);
