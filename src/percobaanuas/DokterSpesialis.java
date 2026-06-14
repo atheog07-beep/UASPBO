@@ -23,17 +23,7 @@ public class DokterSpesialis extends Dokter {
 
     public double getTarifKonsultasi() {
         return TarifKonsultasi;
-    }
-    @Override
-    public String Diagnosa(String keluhan){
-        if(keluhan.equalsIgnoreCase("Sakit Gigi")){
-            System.out.println("menjaga kebersihan gigi");
-        }else if(keluhan.equals("Hipertensi")){
-            System.out.println("perbanyak makan sayur dan buah");
-        }
-        return "tidak valid";
-    }
-    
+    }  
     
     @Override
     public void Periksa(Pasien pasien) {
@@ -44,6 +34,23 @@ public class DokterSpesialis extends Dokter {
      public String getInfo(){
          return "[Spesialis " + spesialisasi + "] " + super.getInfo();
     }
-    
-     
+
+    @Override
+    public String Saran(String keluhan) {
+        if (keluhan.equalsIgnoreCase("Sakit Gigi"))
+            return " Menjaga kebersihan gigi";
+        else if (keluhan.equalsIgnoreCase("Hipertensi"))
+            return " Perbanyak makan sayur dan buah";
+        return "-";
+    }
+
+    @Override
+    public String Diagnosa(String keluhan) {
+        if (keluhan.equalsIgnoreCase("Sakit Gigi"))
+            return "Sakit Gigi";
+        else if (keluhan.equalsIgnoreCase("Hipertensi"))
+            return "Hipertensi";
+        return "tidak valid";
+    }
+  
 }

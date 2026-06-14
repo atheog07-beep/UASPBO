@@ -20,30 +20,11 @@ public class Pasien { // Deklarasi class Pasien
         this.alamat = alamat; // Mengisi atribut alamat dengan parameter alamat
         this.jenisKelamin = jenisKelamin; // Mengisi atribut jenisKelamin dengan parameter jenisKelamin
     }
-
-    // Method getter untuk mengambil nilai NMR
-    public String getNMR() {
-        return NMR; // Mengembalikan nilai NMR
-    }
-
-    // Method getter untuk mengambil nama pasien
-    public String getNama() {
-        return nama; // Mengembalikan nilai nama
-    }
-
-    // Method untuk menghitung umur pasien
-    public int getUmur() {
-        return 2026 - tahunLahir; // Menghitung umur berdasarkan tahun lahir
-    }
-
-    // Method getter untuk mengambil alamat pasien
-    public String getAlamat() {
-        return alamat; // Mengembalikan nilai alamat
-    }
-
-    // Method getter untuk mengambil jenis kelamin pasien
-    public int getJenisKelamin() {
-        return jenisKelamin; // Mengembalikan nilai jenisKelamin
-    }
-
-} // Akhir dari class Pasien
+    
+    //getters
+    public String getNMR() {return NMR;}
+    public String getNama() {return nama;}
+    public int getUmur() {return 2026 - tahunLahir;}
+    public String getAlamat() {return alamat;}
+    public int getJenisKelamin() {return jenisKelamin;}
+}
