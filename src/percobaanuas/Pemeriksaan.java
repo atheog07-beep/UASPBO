@@ -18,6 +18,7 @@ public class Pemeriksaan {
     private double BeratBadan;
     private int NomorAntrian;
     private Resep resep;
+    private String Saran;
     
    
     //construcor pemeriksaan
@@ -33,6 +34,15 @@ public class Pemeriksaan {
     public void ProsesPeriksa() {
         dokter.Periksa(pasien);
         Diagnosa = dokter.Diagnosa(Keluhan);
+        Saran = dokter.Saran(Keluhan); 
+    }
+
+    public String getSaran() {
+        return Saran;
+    }
+
+    public void setSaran(String Saran) {
+        this.Saran = Saran;
     }
     
     public String getIDPeriksa() {
@@ -141,6 +151,7 @@ public class Pemeriksaan {
         System.out.println("Dokter      : " + dokter.getNama());
         System.out.println("Keluhan     : " + Keluhan);
         System.out.println("Diagnosa    : " + Diagnosa);
+        System.out.println("Saran       :" + Saran);
         System.out.println("Tensi       : " + Tensi);
         System.out.println("Suhu        : " + SuhuTubuh + " C");
         System.out.println("BB / TB     : " + BeratBadan + " kg / " + TinggiBadan + " cm");

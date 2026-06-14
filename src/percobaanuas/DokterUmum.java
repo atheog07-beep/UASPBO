@@ -38,24 +38,42 @@ public class DokterUmum extends Dokter {
         System.out.println("Dr. " + getNama() + " sedang memeriksa pasien: " + pasien.getNama());
     }
     
-    public String Diagnosa(String keluhan){
-        if(keluhan.equalsIgnoreCase("Flu")){
-            System.out.println("kurangi konsumsi minum/makan yang dingin");
-        }else if(keluhan.equalsIgnoreCase("Maag")){
-            System.out.println("jangan telat makan, kurangi makanan pedas");
-        }else if(keluhan.equalsIgnoreCase("Hipertensi")){
-            System.out.println("perbanyak makan sayur dan buah");
-        }else if(keluhan.equalsIgnoreCase("Diare")){
-            System.out.println("perbanyak minum air putih");
-        }else if(keluhan.equalsIgnoreCase("Asma")){
-            System.out.println("menjauhi lingkungan yang berasap, hindari aktivitas berat");
-        }
-        return "tidak valid";
-    }
+    
     
     @Override
      public String getInfo(){
         return "[Dokter Umum] " + super.getInfo() + " | Poli: " + Poliklinik;
+    }
+
+    @Override
+    public String Saran(String keluhan) {
+        if(keluhan.equalsIgnoreCase("Flu")){
+            return " kurangi konsumsi minum/makan yang dingin";
+        } else if(keluhan.equalsIgnoreCase("Maag")){
+            return " jangan telat makan, kurangi makanan pedas";
+        } else if(keluhan.equalsIgnoreCase("Hipertensi")){
+            return " perbanyak makan sayur dan buah";
+        } else if(keluhan.equalsIgnoreCase("Diare")){
+            return " perbanyak minum air putih";
+        } else if(keluhan.equalsIgnoreCase("Asma")){
+            return " menjauhi lingkungan yang berasap, hindari aktivitas berat";
+        }
+        return "-";
+    }
+
+    @Override
+    public String Diagnosa(String keluhan) {
+        if (keluhan.equalsIgnoreCase("Flu")) 
+            return "Flu";
+        else if (keluhan.equalsIgnoreCase("Maag")) 
+            return "Maag";
+        else if (keluhan.equalsIgnoreCase("Hipertensi")) 
+            return "Hipertensi";
+        else if (keluhan.equalsIgnoreCase("Diare")) 
+            return "Diare";
+        else if (keluhan.equalsIgnoreCase("Asma")) 
+            return "Asma";
+        return "tidak valid";
     }
     
     

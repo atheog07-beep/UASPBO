@@ -58,7 +58,6 @@ public abstract class Dokter {
                + " | Tarif: Rp " + String.format("%,.0f", TarifKonsultasi);
     }
     
-    public abstract String Diagnosa(String keluhan) ;
-    
-    
+    public abstract String Saran(String keluhan);
+    public abstract String Diagnosa(String keluhan);
 }

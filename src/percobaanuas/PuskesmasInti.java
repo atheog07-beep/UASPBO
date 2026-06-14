@@ -264,10 +264,30 @@ public class PuskesmasInti {
      */
     public void cetakDaftarDokter() {
         System.out.println("========== DAFTAR DOKTER PUSKESMAS ==========");
+        System.out.printf("%-4s %-10s %-15s %-15s %-25s %-15s%n",
+                "No.", "NIP", "Nama", "Spesialis/Poli", "Jadwal", "Tarif");
+        System.out.println("-----------------------------------------------------------------------------------------------");
         for (int i = 0; i < daftarDokter.length; i++) {
-            if (daftarDokter[i] != null) System.out.println((i+1) + ". " + daftarDokter[i].getNama());
+            if (daftarDokter[i] != null) {
+                Dokter d = daftarDokter[i];
+                String tipe;
+                if (d instanceof DokterSpesialis) {
+                    tipe = "Sp. " + ((DokterSpesialis) d).getSpesialisasi();
+                } else if (d instanceof DokterUmum) {
+                    tipe = ((DokterUmum) d).getPoliklinik();
+                } else {
+                    tipe = "-";
+                }
+                System.out.printf("%-4d %-10s %-15s %-15s %-25s Rp %,.0f%n",
+                        (i + 1),
+                        d.getNIP(),
+                        d.getNama(),
+                        tipe,
+                        d.getJadwal(),
+                        d.getTarifKonsultasi());
+            }
         }
-        System.out.println("=============================================");
+        System.out.println("-----------------------------------------------------------------------------------------------");
     }
 
 }
