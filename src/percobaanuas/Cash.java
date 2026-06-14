@@ -2,35 +2,37 @@ package percobaanuas;
 
 public class Cash implements Pembayaran {
 
-    // ---------- Atribut ----------
-    private double TotalBayar;
-    private double UangdiBayar;
-    private double Kembalian;
-    private boolean SudahdiBayar;
+
+    private double totalBayar;
+    private double uangdiBayar;
+    private double kembalian;
+    private boolean sudahdiBayar;
     private Tagihan tagihan;
 
-    public Cash(double TotalBayar, double UangdiBayar, double Kembalian, boolean SudahdiBayar, Tagihan tagihan) {
-        this.TotalBayar = TotalBayar;
-        this.UangdiBayar = UangdiBayar;
-        this.Kembalian = Kembalian;
-        this.SudahdiBayar = SudahdiBayar;
+    public Cash(double totalBayar, double uangdiBayar, double kembalian, boolean sudahdiBayar, Tagihan tagihan) {
+        this.totalBayar = totalBayar;
+        this.uangdiBayar = uangdiBayar;
+        this.kembalian = kembalian;
+        this.sudahdiBayar = sudahdiBayar;
         this.tagihan = tagihan;
     }
 
+    
+
     public double getTotalBayar() {
-        return TotalBayar;
+        return totalBayar;
     }
 
     public double getUangdiBayar() {
-        return UangdiBayar;
+        return uangdiBayar;
     }
 
     public double getKembalian() {
-        return Kembalian;
+        return kembalian;
     }
 
     public boolean isSudahdiBayar() {
-        return SudahdiBayar;
+        return sudahdiBayar;
     }
 
     @Override
@@ -40,10 +42,10 @@ public class Cash implements Pembayaran {
 
     @Override
     public void Bayar() {
-        TotalBayar = tagihan.getTotalTagihan();
-        if (UangdiBayar > TotalBayar) {
-        Kembalian = UangdiBayar - TotalBayar;
-        SudahdiBayar = true;
+        totalBayar = tagihan.getTotalTagihan();
+        if (uangdiBayar > totalBayar) {
+        kembalian = uangdiBayar - totalBayar;
+        sudahdiBayar = true;
             System.out.println(Cetak());
     } else {
             System.out.println("uang tidak cukup");
@@ -60,13 +62,13 @@ public class Cash implements Pembayaran {
             "Kembalian   : Rp %,.0f%n" +
             "Status      : %s%n" +
             "================================",
-            TotalBayar, UangdiBayar, Kembalian,
-            SudahdiBayar ? "LUNAS" : "BELUM LUNAS");
+            totalBayar, uangdiBayar, kembalian,
+            sudahdiBayar ? "LUNAS" : "BELUM LUNAS");
     }
 
     @Override
     public double Total() {
-        return TotalBayar;
+        return totalBayar;
     }
 
     @Override
